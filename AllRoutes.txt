@@ -1,0 +1,897 @@
+
+  GET|HEAD  / .............................................................................................................. home › Frontend\HomeController@index
+  GET|HEAD  _debugbar/assets/javascript ............................................................. debugbar.assets.js › Barryvdh\Debugbar › AssetController@js
+  GET|HEAD  _debugbar/assets/stylesheets .......................................................... debugbar.assets.css › Barryvdh\Debugbar › AssetController@css
+  DELETE    _debugbar/cache/{key}/{tags?} .................................................... debugbar.cache.delete › Barryvdh\Debugbar › CacheController@delete
+  GET|HEAD  _debugbar/clockwork/{id} ................................................... debugbar.clockwork › Barryvdh\Debugbar › OpenHandlerController@clockwork
+  GET|HEAD  _debugbar/open .............................................................. debugbar.openhandler › Barryvdh\Debugbar › OpenHandlerController@handle
+  POST      _ignition/execute-solution ............................................ ignition.executeSolution › Spatie\LaravelIgnition › ExecuteSolutionController
+  GET|HEAD  _ignition/health-check ........................................................ ignition.healthCheck › Spatie\LaravelIgnition › HealthCheckController
+  POST      _ignition/update-config ..................................................... ignition.updateConfig › Spatie\LaravelIgnition › UpdateConfigController
+  GET|HEAD  about ......................................................................... frontend.about › Modules\About\Http\Controllers\AboutController@index
+  GET|HEAD  about-us ........................................................................................ frontend.about_us › Frontend\PageController@aboutUs
+  GET|HEAD  admin-payments/status ........................................... admin.payment.status › Modules\Instructor\Http\Controllers\PaymentController@status
+  ANY       admin-payments/verify/{method} .................................. admin.payment.verify › Modules\Instructor\Http\Controllers\PaymentController@verify
+  GET|HEAD  admin/accounts/create ............................................ admin.accounts.create › Modules\Accounts\Http\Controllers\AccountController@create
+  GET|HEAD  admin/accounts/destroy/{id} .................................... admin.accounts.destroy › Modules\Accounts\Http\Controllers\AccountController@destroy
+  GET|HEAD  admin/accounts/edit/{id} ............................................. admin.accounts.edit › Modules\Accounts\Http\Controllers\AccountController@edit
+  GET|HEAD  admin/accounts/expense/list ................................ admin.accounts.expense.index › Modules\Accounts\Http\Controllers\ExpenseController@index
+  GET|HEAD  admin/accounts/income/list ................................... admin.accounts.income.index › Modules\Accounts\Http\Controllers\IncomeController@index
+  GET|HEAD  admin/accounts/list ................................................ admin.accounts.index › Modules\Accounts\Http\Controllers\AccountController@index
+  POST      admin/accounts/store ............................................... admin.accounts.store › Modules\Accounts\Http\Controllers\AccountController@store
+  GET|HEAD  admin/accounts/transaction/list .............. admin.accounts.transaction.index › Modules\Accounts\Http\Controllers\AccountController@transactionList
+  POST      admin/accounts/update/{id} ....................................... admin.accounts.update › Modules\Accounts\Http\Controllers\AccountController@update
+  GET|HEAD  admin/addon/create ....................................................... admin.addon.create › Modules\Addon\Http\Controllers\AddonController@create
+  GET|HEAD  admin/addon/edit/{id} ........................................................ admin.addon.edit › Modules\Addon\Http\Controllers\AddonController@edit
+  GET|HEAD  admin/addon/list ........................................................... admin.addon.index › Modules\Addon\Http\Controllers\AddonController@index
+  GET|HEAD  admin/addon/status/{id} .................................................. admin.addon.status › Modules\Addon\Http\Controllers\AddonController@status
+  POST      admin/addon/store .......................................................... admin.addon.store › Modules\Addon\Http\Controllers\AddonController@store
+  POST      admin/addon/update/{id} .................................................. admin.addon.update › Modules\Addon\Http\Controllers\AddonController@update
+  GET|HEAD  admin/ai-support ...................................................... admin.ai-support.index › Modules\GNEAI\Http\Controllers\GNEAIController@index
+  POST      admin/ai-support/search ............................................. admin.ai-support.search › Modules\GNEAI\Http\Controllers\GNEAIController@search
+  GET|HEAD  admin/assignment/download/{assignment_id} ....... admin.assignment.download › Modules\Course\Http\Controllers\AssignmentController@assignmentDownload
+  GET|HEAD  admin/assignment/list ............................ course.assignment_list.index › Modules\Course\Http\Controllers\AssignmentController@assignmentList
+  POST      admin/assignment/marks/{id} ..................................... admin.assignment.marks › Modules\Course\Http\Controllers\AssignmentController@marks
+  GET|HEAD  admin/assignment/submission-download/{assignment_id} admin.assignment_submission.download › Modules\Course\Http\Controllers\AssignmentController@ass…
+  GET|HEAD  admin/assignment/submission-list/{id} course.assignment_submission_list.index › Modules\Course\Http\Controllers\AssignmentController@assignmentSubmi…
+  GET|HEAD  admin/assignment/submission-view/{id} course.assignment_submission_view.index › Modules\Course\Http\Controllers\AssignmentController@assignmentSubmi…
+  GET|HEAD  admin/blog .......................................................................... blog.index › Modules\Blog\Http\Controllers\BlogController@index
+  GET|HEAD  admin/blog-category ................................................ blog-category.index › Modules\Blog\Http\Controllers\BlogCategoryController@index
+  GET|HEAD  admin/blog-category/create ....................................... blog-category.create › Modules\Blog\Http\Controllers\BlogCategoryController@create
+  GET|HEAD  admin/blog-category/delete/{id} ................................ blog-category.destroy › Modules\Blog\Http\Controllers\BlogCategoryController@destroy
+  GET|HEAD  admin/blog-category/edit/{id} ........................................ blog-category.edit › Modules\Blog\Http\Controllers\BlogCategoryController@edit
+  POST      admin/blog-category/store .......................................... blog-category.store › Modules\Blog\Http\Controllers\BlogCategoryController@store
+  PUT       admin/blog-category/update/{id} .................................. blog-category.update › Modules\Blog\Http\Controllers\BlogCategoryController@update
+  GET|HEAD  admin/blog/create ................................................................. blog.create › Modules\Blog\Http\Controllers\BlogController@create
+  GET|HEAD  admin/blog/delete/{id} .......................................................... blog.destroy › Modules\Blog\Http\Controllers\BlogController@destroy
+  GET|HEAD  admin/blog/edit/{id} .................................................................. blog.edit › Modules\Blog\Http\Controllers\BlogController@edit
+  POST      admin/blog/store .................................................................... blog.store › Modules\Blog\Http\Controllers\BlogController@store
+  PUT       admin/blog/update/{id} ............................................................ blog.update › Modules\Blog\Http\Controllers\BlogController@update
+  GET|HEAD  admin/brand ...................................................................... brand.index › Modules\Brand\Http\Controllers\BrandController@index
+  GET|HEAD  admin/brand/create ............................................................. brand.create › Modules\Brand\Http\Controllers\BrandController@create
+  GET|HEAD  admin/brand/delete/{id} ...................................................... brand.destroy › Modules\Brand\Http\Controllers\BrandController@destroy
+  GET|HEAD  admin/brand/edit/{id} .............................................................. brand.edit › Modules\Brand\Http\Controllers\BrandController@edit
+  POST      admin/brand/store ................................................................ brand.store › Modules\Brand\Http\Controllers\BrandController@store
+  PUT       admin/brand/update/{id} ........................................................ brand.update › Modules\Brand\Http\Controllers\BrandController@update
+  GET|HEAD  admin/category ............................................... course-category.index › Modules\Course\Http\Controllers\CourseCategoryController@index
+  GET|HEAD  admin/category/create ...................................... course-category.create › Modules\Course\Http\Controllers\CourseCategoryController@create
+  GET|HEAD  admin/category/delete/{id} ............................... course-category.destroy › Modules\Course\Http\Controllers\CourseCategoryController@destroy
+  GET|HEAD  admin/category/edit/{id} ....................................... course-category.edit › Modules\Course\Http\Controllers\CourseCategoryController@edit
+  POST      admin/category/list ............................................ course-category.list › Modules\Course\Http\Controllers\CourseCategoryController@list
+  POST      admin/category/store ......................................... course-category.store › Modules\Course\Http\Controllers\CourseCategoryController@store
+  PUT       admin/category/update/{id} ................................. course-category.update › Modules\Course\Http\Controllers\CourseCategoryController@update
+  GET|HEAD  admin/certificate ................................ admin.certificate.index › Modules\Certificate\Http\Controllers\CertificateGenerateController@index
+  GET|HEAD  admin/certificate/download/{id} . admin.certificate.download › Modules\Certificate\Http\Controllers\CertificateGenerateController@certificateDownload
+  GET|HEAD  admin/certificate/template .............. admin.certificate.template.index › Modules\Certificate\Http\Controllers\CertificateTemplateController@index
+  GET|HEAD  admin/certificate/template/create ..... admin.certificate.template.create › Modules\Certificate\Http\Controllers\CertificateTemplateController@create
+  GET|HEAD  admin/certificate/template/delete/{id} admin.certificate.template.delete › Modules\Certificate\Http\Controllers\CertificateTemplateController@destroy
+  GET|HEAD  admin/certificate/template/edit/{id} ...... admin.certificate.template.edit › Modules\Certificate\Http\Controllers\CertificateTemplateController@edit
+  POST      admin/certificate/template/store ........ admin.certificate.template.store › Modules\Certificate\Http\Controllers\CertificateTemplateController@store
+  POST      admin/certificate/template/update/{id} admin.certificate.template.update › Modules\Certificate\Http\Controllers\CertificateTemplateController@update
+  GET|HEAD  admin/certificate/view/{id} ............. admin.certificate.view › Modules\Certificate\Http\Controllers\CertificateGenerateController@certificateView
+  GET|HEAD  admin/contacts ...................................................... admin.contacts.index › Modules\Contact\Http\Controllers\ContactController@index
+  GET|HEAD  admin/contacts/details/{id} ........................................ admin.contacts.details › Modules\Contact\Http\Controllers\ContactController@show
+  GET|HEAD  admin/course .................................................................. course.index › Modules\Course\Http\Controllers\CourseController@index
+  GET|HEAD  admin/course/ajax/course/assignment/{id} ................ course.get-assignment › Modules\Course\Http\Controllers\AssignmentController@ajaxAssignment
+  GET|HEAD  admin/course/ajax/course/notice-board/{id} ........... course.get-noticeboard › Modules\Course\Http\Controllers\NoticeBoardController@ajaxNoticeBoard
+  GET|HEAD  admin/course/assignment/create/{id} .......................... course.assignment.create › Modules\Course\Http\Controllers\AssignmentController@create
+  GET|HEAD  admin/course/assignment/delete/{id} ........................ course.assignment.destroy › Modules\Course\Http\Controllers\AssignmentController@destroy
+  GET|HEAD  admin/course/assignment/edit/{id} ................................ course.assignment.edit › Modules\Course\Http\Controllers\AssignmentController@edit
+  GET|HEAD  admin/course/assignment/list/{id} .............................. course.assignment.index › Modules\Course\Http\Controllers\AssignmentController@index
+  POST      admin/course/assignment/store/{id} ............................. course.assignment.store › Modules\Course\Http\Controllers\AssignmentController@store
+  PUT       admin/course/assignment/update/{id} .......................... course.assignment.update › Modules\Course\Http\Controllers\AssignmentController@update
+  GET|HEAD  admin/course/content/{id}/{type} .................................... course.addContent › Modules\Course\Http\Controllers\CourseController@addContent
+  GET|HEAD  admin/course/create ......................................................... course.create › Modules\Course\Http\Controllers\CourseController@create
+  GET|HEAD  admin/course/curriculum/create/{id} ............................. course.curriculum.create › Modules\Course\Http\Controllers\SectionController@create
+  GET|HEAD  admin/course/curriculum/delete/{id} ........................... course.curriculum.destroy › Modules\Course\Http\Controllers\SectionController@destroy
+  GET|HEAD  admin/course/curriculum/edit/{id} ................................... course.curriculum.edit › Modules\Course\Http\Controllers\SectionController@edit
+  GET|HEAD  admin/course/curriculum/list/{id} ................................. course.curriculum.index › Modules\Course\Http\Controllers\SectionController@index
+  POST      admin/course/curriculum/store/{id} ................................ course.curriculum.store › Modules\Course\Http\Controllers\SectionController@store
+  POST      admin/course/curriculum/update/{id} ............................. course.curriculum.update › Modules\Course\Http\Controllers\SectionController@update
+  GET|HEAD  admin/course/delete/{id} .................................................. course.destroy › Modules\Course\Http\Controllers\CourseController@destroy
+  GET|HEAD  admin/course/edit/{id} .......................................................... course.edit › Modules\Course\Http\Controllers\CourseController@edit
+  GET|HEAD  admin/course/lesson/create/{id} ...................................... course.lesson.create › Modules\Course\Http\Controllers\LessonController@create
+  GET|HEAD  admin/course/lesson/delete/{id} .................................... course.lesson.destroy › Modules\Course\Http\Controllers\LessonController@destroy
+  GET|HEAD  admin/course/lesson/edit/{id} ............................................ course.lesson.edit › Modules\Course\Http\Controllers\LessonController@edit
+  GET|HEAD  admin/course/lesson/list/{id} .......................................... course.lesson.index › Modules\Course\Http\Controllers\LessonController@index
+  POST      admin/course/lesson/store/{id} ......................................... course.lesson.store › Modules\Course\Http\Controllers\LessonController@store
+  POST      admin/course/lesson/update/{id} ...................................... course.lesson.update › Modules\Course\Http\Controllers\LessonController@update
+  GET|HEAD  admin/course/notice-board/create/{id} ..................... course.notice-board.create › Modules\Course\Http\Controllers\NoticeBoardController@create
+  GET|HEAD  admin/course/notice-board/delete/{id} ................... course.notice-board.destroy › Modules\Course\Http\Controllers\NoticeBoardController@destroy
+  GET|HEAD  admin/course/notice-board/edit/{id} ............................ course.noticeboard.edit › Modules\Course\Http\Controllers\NoticeBoardController@edit
+  GET|HEAD  admin/course/notice-board/list/{id} ......................... course.notice-board.index › Modules\Course\Http\Controllers\NoticeBoardController@index
+  POST      admin/course/notice-board/store/{id} ........................ course.notice-board.store › Modules\Course\Http\Controllers\NoticeBoardController@store
+  PUT       admin/course/notice-board/update/{id} ...................... course.noticeboard.update › Modules\Course\Http\Controllers\NoticeBoardController@update
+  GET|HEAD  admin/course/quiz/create/{id} ............................................ course.quiz.create › Modules\Course\Http\Controllers\QuizController@create
+  GET|HEAD  admin/course/quiz/delete/{id} .......................................... course.quiz.destroy › Modules\Course\Http\Controllers\QuizController@destroy
+  GET|HEAD  admin/course/quiz/edit/{id} .................................................. course.quiz.edit › Modules\Course\Http\Controllers\QuizController@edit
+  GET|HEAD  admin/course/quiz/list/{id} ................................................ course.quiz.index › Modules\Course\Http\Controllers\QuizController@index
+  POST      admin/course/quiz/store/{id} ............................................... course.quiz.store › Modules\Course\Http\Controllers\QuizController@store
+  POST      admin/course/quiz/update/{id} ............................................ course.quiz.update › Modules\Course\Http\Controllers\QuizController@update
+  POST      admin/course/store ............................................................ course.store › Modules\Course\Http\Controllers\CourseController@store
+  PUT       admin/course/update/{id} .................................................... course.update › Modules\Course\Http\Controllers\CourseController@update
+  GET|HEAD  admin/discount-course ..................................... admin.discount-course.index › Modules\CMS\Http\Controllers\DiscountCourseController@index
+  GET|HEAD  admin/discount-course/create ............................ admin.discount-course.create › Modules\CMS\Http\Controllers\DiscountCourseController@create
+  GET|HEAD  admin/discount-course/delete/{id} ..................... admin.discount-course.destroy › Modules\CMS\Http\Controllers\DiscountCourseController@destroy
+  GET|HEAD  admin/discount-course/edit/{id} ............................. admin.discount-course.edit › Modules\CMS\Http\Controllers\DiscountCourseController@edit
+  POST      admin/discount-course/select/course ............... admin.discount-course.select › Modules\CMS\Http\Controllers\DiscountCourseController@selectCourse
+  POST      admin/discount-course/store ............................... admin.discount-course.store › Modules\CMS\Http\Controllers\DiscountCourseController@store
+  POST      admin/discount-course/update/{id} ....................... admin.discount-course.update › Modules\CMS\Http\Controllers\DiscountCourseController@update
+  GET|HEAD  admin/enroll ............................................................. admin.enroll.index › Modules\Order\Http\Controllers\EnrollController@index
+  GET|HEAD  admin/enroll/payment_detail/{order_item_id} .......... admin.payment_detail.view › Modules\Order\Http\Controllers\EnrollController@adminPaymentDetail
+  GET|HEAD  admin/enroll/view/{id} ............................................ admin.invoice.view › Modules\Order\Http\Controllers\EnrollController@adminInvoice
+  GET|HEAD  admin/event/manage ............................................. event.admin.manage.index › Modules\Event\Http\Controllers\EventAdminController@index
+  GET|HEAD  admin/event/manage/approve/{course_id} ............................ event.admin.approve › Modules\Event\Http\Controllers\EventAdminController@approve
+  GET|HEAD  admin/event/manage/approved .......................... event.admin.approved_event › Modules\Event\Http\Controllers\EventAdminController@approvedIndex
+  GET|HEAD  admin/event/manage/category ..................................... event.category.index › Modules\Event\Http\Controllers\EventCategoryController@index
+  GET|HEAD  admin/event/manage/category/create ............................ event.category.create › Modules\Event\Http\Controllers\EventCategoryController@create
+  GET|HEAD  admin/event/manage/category/delete/{id} ..................... event.category.destroy › Modules\Event\Http\Controllers\EventCategoryController@destroy
+  GET|HEAD  admin/event/manage/category/edit/{id} ............................. event.category.edit › Modules\Event\Http\Controllers\EventCategoryController@edit
+  POST      admin/event/manage/category/store ............................... event.category.store › Modules\Event\Http\Controllers\EventCategoryController@store
+  POST      admin/event/manage/category/update/{id} ....................... event.category.update › Modules\Event\Http\Controllers\EventCategoryController@update
+  GET|HEAD  admin/event/manage/create ........................................... event.admin.create › Modules\Event\Http\Controllers\EventAdminController@create
+  GET|HEAD  admin/event/manage/create/{id}/organizers ........ event.admin.organizer.create › Modules\Event\Http\Controllers\EventAdminController@createOrganizer
+  GET|HEAD  admin/event/manage/create/{id}/schedules ........... event.admin.schedule.create › Modules\Event\Http\Controllers\EventAdminController@createSchedule
+  GET|HEAD  admin/event/manage/create/{id}/schedules_timeline event.admin.schedules_timeline.create › Modules\Event\Http\Controllers\EventAdminController@create…
+  GET|HEAD  admin/event/manage/create/{id}/speakers .............. event.admin.speaker.create › Modules\Event\Http\Controllers\EventAdminController@createSpeaker
+  GET|HEAD  admin/event/manage/delete/{id} .................................... event.admin.destroy › Modules\Event\Http\Controllers\EventAdminController@destroy
+  GET|HEAD  admin/event/manage/delete/{id}/organizers ...... event.admin.organizer.destroy › Modules\Event\Http\Controllers\EventAdminController@destroyOrganizer
+  GET|HEAD  admin/event/manage/delete/{id}/schedules ......... event.admin.schedule.destroy › Modules\Event\Http\Controllers\EventAdminController@destroySchedule
+  GET|HEAD  admin/event/manage/delete/{id}/schedules_timeline event.admin.schedules_timeline.destroy › Modules\Event\Http\Controllers\EventAdminController@destr…
+  GET|HEAD  admin/event/manage/delete/{id}/speakers ............ event.admin.speaker.destroy › Modules\Event\Http\Controllers\EventAdminController@destroySpeaker
+  GET|HEAD  admin/event/manage/edit/{id}/detail ..................................... event.admin.edit › Modules\Event\Http\Controllers\EventAdminController@edit
+  GET|HEAD  admin/event/manage/edit/{id}/organizers .............. event.admin.organizer.edit › Modules\Event\Http\Controllers\EventAdminController@editOrganizer
+  GET|HEAD  admin/event/manage/edit/{id}/schedules ................. event.admin.schedule.edit › Modules\Event\Http\Controllers\EventAdminController@editSchedule
+  GET|HEAD  admin/event/manage/edit/{id}/schedules_timeline event.admin.schedules_timeline.edit › Modules\Event\Http\Controllers\EventAdminController@editSchedu…
+  GET|HEAD  admin/event/manage/edit/{id}/speakers .................... event.admin.speaker.edit › Modules\Event\Http\Controllers\EventAdminController@editSpeaker
+  GET|HEAD  admin/event/manage/index/{id}/organizers ............. event.admin.organizer.index › Modules\Event\Http\Controllers\EventAdminController@organizerTab
+  GET|HEAD  admin/event/manage/index/{id}/schedules ................ event.admin.schedule.index › Modules\Event\Http\Controllers\EventAdminController@scheduleTab
+  GET|HEAD  admin/event/manage/index/{id}/schedules_timeline event.admin.schedules_timeline.index › Modules\Event\Http\Controllers\EventAdminController@schedule…
+  GET|HEAD  admin/event/manage/index/{id}/speakers ................... event.admin.speaker.index › Modules\Event\Http\Controllers\EventAdminController@speakerTab
+  GET|HEAD  admin/event/manage/purchase_booking ......... event.admin.purchase_booking › Modules\Event\Http\Controllers\EventAdminController@purchaseBookingIndex
+  GET|HEAD  admin/event/manage/purchase_booking/participants/invoice/{id} event.admin.purchase_booking.participants_invoice › Modules\Event\Http\Controllers\Eve…
+  GET|HEAD  admin/event/manage/purchase_booking/participants/{id} event.admin.purchase_booking.participants › Modules\Event\Http\Controllers\EventAdminControlle…
+  GET|HEAD  admin/event/manage/reject/{course_id} ............................... event.admin.reject › Modules\Event\Http\Controllers\EventAdminController@reject
+  GET|HEAD  admin/event/manage/rejected .......................... event.admin.rejected_event › Modules\Event\Http\Controllers\EventAdminController@rejectedIndex
+  GET|HEAD  admin/event/manage/requested ....................... event.admin.requested_event › Modules\Event\Http\Controllers\EventAdminController@requestedIndex
+  POST      admin/event/manage/store .............................................. event.admin.store › Modules\Event\Http\Controllers\EventAdminController@store
+  POST      admin/event/manage/store/{id}/organizers ........... event.admin.organizer.store › Modules\Event\Http\Controllers\EventAdminController@storeOrganizer
+  POST      admin/event/manage/store/{id}/schedules .............. event.admin.schedule.store › Modules\Event\Http\Controllers\EventAdminController@storeSchedule
+  POST      admin/event/manage/store/{id}/schedules_timeline event.admin.schedules_timeline.store › Modules\Event\Http\Controllers\EventAdminController@storeSch…
+  POST      admin/event/manage/store/{id}/speakers ................. event.admin.speaker.store › Modules\Event\Http\Controllers\EventAdminController@storeSpeaker
+  GET|HEAD  admin/event/manage/swipe-featured/{id} ......... event.admin.manage.swipeFeatured › Modules\Event\Http\Controllers\EventAdminController@swipeFeatured
+  GET|HEAD  admin/event/manage/swipe-status/{id} ............... event.admin.manage.swipeActive › Modules\Event\Http\Controllers\EventAdminController@swipeActive
+  POST      admin/event/manage/update/{id}/detail ............................... event.admin.update › Modules\Event\Http\Controllers\EventAdminController@update
+  POST      admin/event/manage/update/{id}/organizers ........ event.admin.organizer.update › Modules\Event\Http\Controllers\EventAdminController@updateOrganizer
+  POST      admin/event/manage/update/{id}/schedules ........... event.admin.schedule.update › Modules\Event\Http\Controllers\EventAdminController@updateSchedule
+  POST      admin/event/manage/update/{id}/schedules_timeline event.admin.schedules_timeline.update › Modules\Event\Http\Controllers\EventAdminController@update…
+  POST      admin/event/manage/update/{id}/speakers .............. event.admin.speaker.update › Modules\Event\Http\Controllers\EventAdminController@updateSpeaker
+  GET|HEAD  admin/featured-course ..................................... admin.featured-course.index › Modules\CMS\Http\Controllers\FeaturedCourseController@index
+  GET|HEAD  admin/featured-course/create ............................ admin.featured-course.create › Modules\CMS\Http\Controllers\FeaturedCourseController@create
+  GET|HEAD  admin/featured-course/delete/{id} ..................... admin.featured-course.destroy › Modules\CMS\Http\Controllers\FeaturedCourseController@destroy
+  GET|HEAD  admin/featured-course/edit/{id} ............................. admin.featured-course.edit › Modules\CMS\Http\Controllers\FeaturedCourseController@edit
+  POST      admin/featured-course/select/course ............... admin.featured-course.select › Modules\CMS\Http\Controllers\FeaturedCourseController@selectCourse
+  POST      admin/featured-course/store ............................... admin.featured-course.store › Modules\CMS\Http\Controllers\FeaturedCourseController@store
+  POST      admin/featured-course/update/{id} ....................... admin.featured-course.update › Modules\CMS\Http\Controllers\FeaturedCourseController@update
+  GET|HEAD  admin/footer-menu ....................................................... footer-menu.index › Modules\CMS\Http\Controllers\FooterMenuController@index
+  GET|HEAD  admin/footer-menu-link/create/{footer_menu_id} ............... footer-menu-link.create › Modules\CMS\Http\Controllers\FooterMenuLinkController@create
+  GET|HEAD  admin/footer-menu-link/delete/{footer_menu_id}/{id} ........ footer-menu-link.destroy › Modules\CMS\Http\Controllers\FooterMenuLinkController@destroy
+  GET|HEAD  admin/footer-menu-link/edit/{footer_menu_id}/{id} ................ footer-menu-link.edit › Modules\CMS\Http\Controllers\FooterMenuLinkController@edit
+  POST      admin/footer-menu-link/store/{footer_menu_id} .................. footer-menu-link.store › Modules\CMS\Http\Controllers\FooterMenuLinkController@store
+  POST      admin/footer-menu-link/update/{footer_menu_id}/{id} .......... footer-menu-link.update › Modules\CMS\Http\Controllers\FooterMenuLinkController@update
+  GET|HEAD  admin/footer-menu/create .............................................. footer-menu.create › Modules\CMS\Http\Controllers\FooterMenuController@create
+  GET|HEAD  admin/footer-menu/delete/{id} ....................................... footer-menu.destroy › Modules\CMS\Http\Controllers\FooterMenuController@destroy
+  GET|HEAD  admin/footer-menu/edit/{id} ............................................... footer-menu.edit › Modules\CMS\Http\Controllers\FooterMenuController@edit
+  POST      admin/footer-menu/store ................................................. footer-menu.store › Modules\CMS\Http\Controllers\FooterMenuController@store
+  POST      admin/footer-menu/update/{id} ......................................... footer-menu.update › Modules\CMS\Http\Controllers\FooterMenuController@update
+  GET|HEAD  admin/forgot-password ......................................................... forgot-password › Backend\AuthenticationController@forgotPasswordPage
+  POST      admin/forgot-password ............................................................. forgot.password › Backend\AuthenticationController@forgotPassword
+  GET|HEAD  admin/home-section-setting .................................... home_section.setting.index › Modules\CMS\Http\Controllers\HomeSectionController@index
+  GET|HEAD  admin/home-section-setting/app ................... app_home_section.setting.index › Modules\CMS\Http\Controllers\HomeSectionController@appHomeSection
+  GET|HEAD  admin/home-section-setting/create/{type} .................... home_section.setting.create › Modules\CMS\Http\Controllers\HomeSectionController@create
+  GET|HEAD  admin/home-section-setting/delete/{id} ..................... home_section.setting.delete › Modules\CMS\Http\Controllers\HomeSectionController@destroy
+  GET|HEAD  admin/home-section-setting/edit/{id} ............................ home_section.setting.edit › Modules\CMS\Http\Controllers\HomeSectionController@edit
+  POST      admin/home-section-setting/store/{type} ....................... home_section.setting.store › Modules\CMS\Http\Controllers\HomeSectionController@store
+  POST      admin/home-section-setting/update/{id} ...................... home_section.setting.update › Modules\CMS\Http\Controllers\HomeSectionController@update
+  GET|HEAD  admin/image-gallery ........................................... admin.image_gallery.index › Modules\CMS\Http\Controllers\ImageGalleryController@index
+  GET|HEAD  admin/image-gallery/edit/{id} ................................... admin.image_gallery.edit › Modules\CMS\Http\Controllers\ImageGalleryController@edit
+  POST      admin/image-gallery/update/{id} ............................. admin.image_gallery.update › Modules\CMS\Http\Controllers\ImageGalleryController@update
+  GET|HEAD  admin/instructor/add-experience/{id} ....... admin.instructor.add.experience › Modules\Instructor\Http\Controllers\ExperienceController@addExperience
+  GET|HEAD  admin/instructor/add-institute/{id} ............ admin.instructor.addInstitute › Modules\Instructor\Http\Controllers\EducationController@addInstitute
+  GET|HEAD  admin/instructor/add-skill/{id} ........................... admin.instructor.add.skill › Modules\Instructor\Http\Controllers\SkillController@addSkill
+  GET|HEAD  admin/instructor/approve/{id} ........................... admin.instructor.approve › Modules\Instructor\Http\Controllers\InstructorController@approve
+  GET|HEAD  admin/instructor/create ................................... admin.instructor.create › Modules\Instructor\Http\Controllers\InstructorController@create
+  GET|HEAD  admin/instructor/delete-experience/{key}/{id} admin.instructor.delete.experience › Modules\Instructor\Http\Controllers\ExperienceController@deleteEx…
+  GET|HEAD  admin/instructor/delete-institute/{key}/{id} admin.instructor.delete.institute › Modules\Instructor\Http\Controllers\EducationController@deleteInsti…
+  GET|HEAD  admin/instructor/edit-experience/{key}/{id} admin.instructor.edit.experience › Modules\Instructor\Http\Controllers\ExperienceController@editExperien…
+  GET|HEAD  admin/instructor/edit-institute/{key}/{id} .. admin.instructor.edit.institute › Modules\Instructor\Http\Controllers\EducationController@editInstitute
+  GET|HEAD  admin/instructor/edit/{id}/{slug} ............................. admin.instructor.edit › Modules\Instructor\Http\Controllers\InstructorController@edit
+  GET|HEAD  admin/instructor/list ....................................... admin.instructor.index › Modules\Instructor\Http\Controllers\InstructorController@index
+  GET|HEAD  admin/instructor/login/{id} ................................. admin.instructor.login › Modules\Instructor\Http\Controllers\InstructorController@login
+  GET|HEAD  admin/instructor/make-payment/{id} .................. admin.instructor.payout.payment › Modules\Instructor\Http\Controllers\PaymentController@payment
+  POST      admin/instructor/make-reject-payout/{id} admin.instructor.payout.reject.make › Modules\Instructor\Http\Controllers\PayoutController@makeRejectPayout
+  GET|HEAD  admin/instructor/payout-details/{id} ................. admin.instructor.payout.details › Modules\Instructor\Http\Controllers\PayoutController@details
+  GET|HEAD  admin/instructor/payout-list ............................. admin.instructor.payout.index › Modules\Instructor\Http\Controllers\PayoutController@index
+  GET|HEAD  admin/instructor/payout-requests .................... admin.instructor.payout.request › Modules\Instructor\Http\Controllers\PayoutController@requests
+  GET|HEAD  admin/instructor/payout-requests/{id}/approve ........ admin.instructor.payout.approve › Modules\Instructor\Http\Controllers\PayoutController@approve
+  GET|HEAD  admin/instructor/payout-requests/{id}/reject ........... admin.instructor.payout.reject › Modules\Instructor\Http\Controllers\PayoutController@reject
+  GET|HEAD  admin/instructor/re-activate/{id} ................ admin.instructor.re_activate › Modules\Instructor\Http\Controllers\InstructorController@reActivate
+  GET|HEAD  admin/instructor/rejected-payout-list .............. admin.instructor.payout.rejected › Modules\Instructor\Http\Controllers\PayoutController@rejected
+  GET|HEAD  admin/instructor/requests ............................. admin.instructor.requests › Modules\Instructor\Http\Controllers\InstructorController@requests
+  POST      admin/instructor/store ...................................... admin.instructor.store › Modules\Instructor\Http\Controllers\InstructorController@store
+  POST      admin/instructor/store-experience/{id} . admin.instructor.store.experience › Modules\Instructor\Http\Controllers\ExperienceController@storeExperience
+  POST      admin/instructor/store-institute/{id} ..... admin.instructor.store.institute › Modules\Instructor\Http\Controllers\EducationController@storeInstitute
+  POST      admin/instructor/store-skill/{id} ..................... admin.instructor.store.skill › Modules\Instructor\Http\Controllers\SkillController@storeSkill
+  GET|HEAD  admin/instructor/suspend/{id} ........................... admin.instructor.suspend › Modules\Instructor\Http\Controllers\InstructorController@suspend
+  GET|HEAD  admin/instructor/suspended ............................ admin.instructor.suspends › Modules\Instructor\Http\Controllers\InstructorController@suspends
+  GET|HEAD  admin/instructor/unpaid-payout-list .................... admin.instructor.payout.unpaid › Modules\Instructor\Http\Controllers\PayoutController@unpaid
+  POST      admin/instructor/update-experience/{key}/{id} admin.instructor.update.experience › Modules\Instructor\Http\Controllers\ExperienceController@updateEx…
+  POST      admin/instructor/update-institute/{key}/{id} admin.instructor.update.institute › Modules\Instructor\Http\Controllers\EducationController@updateInsti…
+  POST      admin/instructor/update/{id}/{slug} ....................... admin.instructor.update › Modules\Instructor\Http\Controllers\InstructorController@update
+  GET|HEAD  admin/login ...................................................................................... login › Backend\AuthenticationController@loginPage
+  POST      admin/login ..................................................................................... login.auth › Backend\AuthenticationController@login
+  GET|HEAD  admin/offline_payment/approve/view/{id} .................. course.enroll.view › Modules\Offline\Http\Controllers\OfflineController@viewCourseApproval
+  POST      admin/offline_payment/approve/{id} .................. course.enroll.approve › Modules\Offline\Http\Controllers\OfflineController@updateCourseApproval
+  GET|HEAD  admin/offline_payment/course/enroll/approval .. admin.course.enroll.approval › Modules\Offline\Http\Controllers\OfflineController@courseApprovalIndex
+  GET|HEAD  admin/offline_payment/destroy/{id} ................. course.enroll.destroy › Modules\Offline\Http\Controllers\OfflineController@destroyCourseApproval
+  GET|HEAD  admin/offline_payment/event/approve/view/{id} .............. event.enroll.view › Modules\Offline\Http\Controllers\OfflineController@viewEventApproval
+  POST      admin/offline_payment/event/approve/{id} .............. event.enroll.approve › Modules\Offline\Http\Controllers\OfflineController@updateEventApproval
+  GET|HEAD  admin/offline_payment/event/destroy/{id} ............. event.enroll.destroy › Modules\Offline\Http\Controllers\OfflineController@destroyEventApproval
+  GET|HEAD  admin/offline_payment/event/enroll/approval ..... admin.event.enroll.approval › Modules\Offline\Http\Controllers\OfflineController@eventApprovalIndex
+  GET|HEAD  admin/offline_payment/package/approve/view/{id} ........ package.enroll.view › Modules\Offline\Http\Controllers\OfflineController@viewPackageApproval
+  POST      admin/offline_payment/package/approve/{id} ........ package.enroll.approve › Modules\Offline\Http\Controllers\OfflineController@updatePackageApproval
+  GET|HEAD  admin/offline_payment/package/destroy/{id} ....... package.enroll.destroy › Modules\Offline\Http\Controllers\OfflineController@destroyPackageApproval
+  GET|HEAD  admin/offline_payment/package/enroll/approval admin.package.enroll.approval › Modules\Offline\Http\Controllers\OfflineController@packageApprovalIndex
+  GET|HEAD  admin/offline_payment/settings ......................... admin.offline_payment.settings › Modules\Offline\Http\Controllers\OfflineController@Settings
+  GET|HEAD  admin/offline_payment/settings/edit/{id} ...... admin.offline_payment.settings_edit › Modules\Offline\Http\Controllers\OfflineController@SettingsEdit
+  POST      admin/offline_payment/settings/update/{id} admin.offline_payment.settings_update › Modules\Offline\Http\Controllers\OfflineController@SettingsUpdate
+  GET|HEAD  admin/organization .................................... organization.admin.index › Modules\Organization\Http\Controllers\OrganizationController@index
+  GET|HEAD  admin/organization/add-skill/{id} .............. organization.admin.add.skill › Modules\Organization\Http\Controllers\OrganizationController@addSkill
+  GET|HEAD  admin/organization/approve/{id} ................... organization.admin.approve › Modules\Organization\Http\Controllers\OrganizationController@approve
+  GET|HEAD  admin/organization/create ........................... organization.admin.create › Modules\Organization\Http\Controllers\OrganizationController@create
+  GET|HEAD  admin/organization/delete/{id} .................... organization.admin.destroy › Modules\Organization\Http\Controllers\OrganizationController@destroy
+  GET|HEAD  admin/organization/edit/{id}/{slug} ..................... organization.admin.edit › Modules\Organization\Http\Controllers\OrganizationController@edit
+  GET|HEAD  admin/organization/login/{id} ......................... admin.organization.login › Modules\Organization\Http\Controllers\OrganizationController@login
+  GET|HEAD  admin/organization/re-activate/{id} ........ organization.admin.re_activate › Modules\Organization\Http\Controllers\OrganizationController@reActivate
+  GET|HEAD  admin/organization/requests ................. organization.admin.requests › Modules\Organization\Http\Controllers\OrganizationController@requestIndex
+  POST      admin/organization/store .............................. organization.admin.store › Modules\Organization\Http\Controllers\OrganizationController@store
+  POST      admin/organization/store-skill/{id} ........ organization.admin.store.skill › Modules\Organization\Http\Controllers\OrganizationController@storeSkill
+  GET|HEAD  admin/organization/suspend/{id} ................... organization.admin.suspend › Modules\Organization\Http\Controllers\OrganizationController@suspend
+  GET|HEAD  admin/organization/suspended ................ organization.admin.suspends › Modules\Organization\Http\Controllers\OrganizationController@suspendIndex
+  POST      admin/organization/update/{id}/{slug} ............... organization.admin.update › Modules\Organization\Http\Controllers\OrganizationController@update
+  GET|HEAD  admin/pages ........................................................................ pages.index › Modules\Page\Http\Controllers\PageController@index
+  GET|HEAD  admin/pages/create ............................................................... pages.create › Modules\Page\Http\Controllers\PageController@create
+  GET|HEAD  admin/pages/delete/{id} ........................................................ pages.destroy › Modules\Page\Http\Controllers\PageController@destroy
+  GET|HEAD  admin/pages/edit/{id} ................................................................ pages.edit › Modules\Page\Http\Controllers\PageController@edit
+  POST      admin/pages/store .................................................................. pages.store › Modules\Page\Http\Controllers\PageController@store
+  PUT       admin/pages/update/{id} .......................................................... pages.update › Modules\Page\Http\Controllers\PageController@update
+  GET|HEAD  admin/payment-method .......................................... payment_method.index › Modules\Payment\Http\Controllers\PaymentMethodController@index
+  GET|HEAD  admin/payment-method/delete/{id} .......................... payment_method.destroy › Modules\Payment\Http\Controllers\PaymentMethodController@destroy
+  GET|HEAD  admin/payment-method/edit/{id} .................................. payment_method.edit › Modules\Payment\Http\Controllers\PaymentMethodController@edit
+  POST      admin/payment-method/update/{id} ............................ payment_method.update › Modules\Payment\Http\Controllers\PaymentMethodController@update
+  GET|HEAD  admin/popular-categories ................................. course-category.popular › Modules\Course\Http\Controllers\CourseCategoryController@popular
+  GET|HEAD  admin/popular-categories-deleted/{id} ....... popular-course-category.delete › Modules\Course\Http\Controllers\CourseCategoryController@popularDelete
+  GET|HEAD  admin/popular-category-created ............ popular-course-category.created › Modules\Course\Http\Controllers\CourseCategoryController@popularCreated
+  POST      admin/popular-category-store .................. popular-course-category.store › Modules\Course\Http\Controllers\CourseCategoryController@popularStore
+  GET|HEAD  admin/question/add-question/{id} ..................................... admin.question.add › Modules\Course\Http\Controllers\QuestionController@create
+  GET|HEAD  admin/question/delete-question/{id} .............................. admin.question.delete › Modules\Course\Http\Controllers\QuestionController@destroy
+  GET|HEAD  admin/question/edit-question/{id} ..................................... admin.question.edit › Modules\Course\Http\Controllers\QuestionController@edit
+  GET|HEAD  admin/question/list/{id} ...................................... admin.question.list › Modules\Course\Http\Controllers\QuestionController@questionList
+  POST      admin/question/sortable-question/{id} ......................... admin.question.sortable › Modules\Course\Http\Controllers\QuestionController@sortable
+  POST      admin/question/store-question/{id} .................................. admin.question.store › Modules\Course\Http\Controllers\QuestionController@store
+  POST      admin/question/update-question/{id} ............................... admin.question.update › Modules\Course\Http\Controllers\QuestionController@update
+  GET|HEAD  admin/quiz/list ......................................................... admin.quiz.index › Modules\Course\Http\Controllers\QuestionController@index
+  GET|HEAD  admin/quiz/submission-list/{id} ............................... admin.quiz.submission › Modules\Course\Http\Controllers\QuestionController@submission
+  GET|HEAD  admin/quiz/view/{id} ...................................................... admin.quiz.view › Modules\Course\Http\Controllers\QuestionController@view
+  GET|HEAD  admin/register ............................................................................. register › Backend\AuthenticationController@registerPage
+  POST      admin/register ................................................................................. register › Backend\AuthenticationController@register
+  GET|HEAD  admin/report/course-completion ......................... report.course-completion › Modules\Report\Http\Controllers\ReportController@courseCompletion
+  GET|HEAD  admin/report/course-completion/export ..... report.course-completion.export › Modules\Report\Http\Controllers\ReportController@courseCompletionExport
+  GET|HEAD  admin/report/event-booking ............................ report.event-booking › Modules\Event\Http\Controllers\EventReportController@eventBookingIndex
+  GET|HEAD  admin/report/event-booking/export ............. report.event-booking.export › Modules\Event\Http\Controllers\EventReportController@eventBookingExport
+  GET|HEAD  admin/report/instructor-engagement ............. report.instructor-engagement › Modules\Report\Http\Controllers\ReportController@instructorEngagement
+  GET|HEAD  admin/report/instructor-engagement/export report.instructor-engagement.export › Modules\Report\Http\Controllers\ReportController@instructorEngagemen…
+  GET|HEAD  admin/report/purchase-history ............................ report.purchase-history › Modules\Report\Http\Controllers\ReportController@purchaseHistory
+  GET|HEAD  admin/report/purchase-history/export ........ report.purchase-history.export › Modules\Report\Http\Controllers\ReportController@purchaseHistoryExport
+  GET|HEAD  admin/report/student-engagement ...................... report.student-engagement › Modules\Report\Http\Controllers\ReportController@studentEngagement
+  GET|HEAD  admin/report/student-engagement/export .. report.student-engagement.export › Modules\Report\Http\Controllers\ReportController@studentEngagementExport
+  GET|HEAD  admin/report/student-performance ................... report.student-performance › Modules\Report\Http\Controllers\ReportController@studentPerformance
+  GET|HEAD  admin/report/student-performance/export report.student-performance.export › Modules\Report\Http\Controllers\ReportController@studentPerformanceExport
+  GET|HEAD  admin/report/transaction .................................... report.admin_transaction › Modules\Report\Http\Controllers\ReportController@transaction
+  GET|HEAD  admin/report/transaction/export ................ report.admin_transaction.export › Modules\Report\Http\Controllers\ReportController@transactionExport
+  POST      admin/reset-password ................................................................ reset.password › Backend\AuthenticationController@resetPassword
+  GET|HEAD  admin/reset-password/{email}/{token} ............................................ reset-password › Backend\AuthenticationController@resetPasswordPage
+  GET|HEAD  admin/revenue ......................................................................................... revenue › Backend\DashboardController@revenue
+  GET|HEAD  admin/review/list ....................................................... admin.review.index › Modules\Course\Http\Controllers\ReviewController@index
+  GET|HEAD  admin/sales ............................................................................................... sales › Backend\DashboardController@sales
+  GET|HEAD  admin/services ................................................... services.index › Modules\Services\Http\Controllers\ServicesController@servicesList
+  GET|HEAD  admin/services/create ................................................. services.create › Modules\Services\Http\Controllers\ServicesController@create
+  GET|HEAD  admin/services/delete/{id} .......................................... services.destroy › Modules\Services\Http\Controllers\ServicesController@destroy
+  GET|HEAD  admin/services/edit/{id} .................................................. services.edit › Modules\Services\Http\Controllers\ServicesController@edit
+  POST      admin/services/store .................................................... services.store › Modules\Services\Http\Controllers\ServicesController@store
+  PUT       admin/services/update/{id} ............................................ services.update › Modules\Services\Http\Controllers\ServicesController@update
+  GET|HEAD  admin/slider .................................................................. slider.index › Modules\Slider\Http\Controllers\SliderController@index
+  GET|HEAD  admin/slider/create ......................................................... slider.create › Modules\Slider\Http\Controllers\SliderController@create
+  GET|HEAD  admin/slider/delete/{id} .................................................. slider.destroy › Modules\Slider\Http\Controllers\SliderController@destroy
+  GET|HEAD  admin/slider/edit/{id} .......................................................... slider.edit › Modules\Slider\Http\Controllers\SliderController@edit
+  POST      admin/slider/store ............................................................ slider.store › Modules\Slider\Http\Controllers\SliderController@store
+  PUT       admin/slider/update/{id} .................................................... slider.update › Modules\Slider\Http\Controllers\SliderController@update
+  GET|HEAD  admin/startups ................................................... startups.index › Modules\StartUps\Http\Controllers\StartUpsController@startupsList
+  GET|HEAD  admin/startups/create ................................................. startups.create › Modules\StartUps\Http\Controllers\StartUpsController@create
+  GET|HEAD  admin/startups/delete/{id} .......................................... startups.destroy › Modules\StartUps\Http\Controllers\StartUpsController@destroy
+  GET|HEAD  admin/startups/edit/{id} .................................................. startups.edit › Modules\StartUps\Http\Controllers\StartUpsController@edit
+  POST      admin/startups/store .................................................... startups.store › Modules\StartUps\Http\Controllers\StartUpsController@store
+  PUT       admin/startups/update/{id} ............................................ startups.update › Modules\StartUps\Http\Controllers\StartUpsController@update
+  GET|HEAD  admin/student/add-experience/{id} ................ admin.student.add.experience › Modules\Student\Http\Controllers\ExperienceController@addExperience
+  GET|HEAD  admin/student/add-institute/{id} ..................... admin.student.addInstitute › Modules\Student\Http\Controllers\EducationController@addInstitute
+  GET|HEAD  admin/student/add-skill/{id} .................................... admin.student.add.skill › Modules\Student\Http\Controllers\SkillController@addSkill
+  GET|HEAD  admin/student/create ............................................... admin.student.create › Modules\Student\Http\Controllers\StudentController@create
+  GET|HEAD  admin/student/delete-experience/{key}/{id} . admin.student.delete.experience › Modules\Student\Http\Controllers\ExperienceController@deleteExperience
+  GET|HEAD  admin/student/delete-institute/{key}/{id} ..... admin.student.delete.institute › Modules\Student\Http\Controllers\EducationController@deleteInstitute
+  GET|HEAD  admin/student/edit-experience/{key}/{id} ....... admin.student.edit.experience › Modules\Student\Http\Controllers\ExperienceController@editExperience
+  GET|HEAD  admin/student/edit-institute/{key}/{id} ........... admin.student.edit.institute › Modules\Student\Http\Controllers\EducationController@editInstitute
+  GET|HEAD  admin/student/edit/{id}/{slug} ......................................... admin.student.edit › Modules\Student\Http\Controllers\StudentController@edit
+  GET|HEAD  admin/student/list ................................................... admin.student.index › Modules\Student\Http\Controllers\StudentController@index
+  GET|HEAD  admin/student/login/{id} ............................................. admin.student.login › Modules\Student\Http\Controllers\StudentController@login
+  GET|HEAD  admin/student/re-activate/{id} ............................ admin.student.re_activate › Modules\Student\Http\Controllers\StudentController@reActivate
+  POST      admin/student/store .................................................. admin.student.store › Modules\Student\Http\Controllers\StudentController@store
+  POST      admin/student/store-experience/{id} .......... admin.student.store.experience › Modules\Student\Http\Controllers\ExperienceController@storeExperience
+  POST      admin/student/store-institute/{id} .............. admin.student.store.institute › Modules\Student\Http\Controllers\EducationController@storeInstitute
+  POST      admin/student/store-skill/{id} .............................. admin.student.store.skill › Modules\Student\Http\Controllers\SkillController@storeSkill
+  GET|HEAD  admin/student/suspend/{id} ....................................... admin.student.suspend › Modules\Student\Http\Controllers\StudentController@suspend
+  POST      admin/student/update-experience/{key}/{id} . admin.student.update.experience › Modules\Student\Http\Controllers\ExperienceController@updateExperience
+  POST      admin/student/update-institute/{key}/{id} ..... admin.student.update.institute › Modules\Student\Http\Controllers\EducationController@updateInstitute
+  POST      admin/student/update/{id}/{slug} ................................... admin.student.update › Modules\Student\Http\Controllers\StudentController@update
+  GET|HEAD  admin/testimonial ................................................ admin.testimonial.index › Modules\CMS\Http\Controllers\TestimonialController@index
+  GET|HEAD  admin/testimonial/create ....................................... admin.testimonial.create › Modules\CMS\Http\Controllers\TestimonialController@create
+  GET|HEAD  admin/testimonial/delete/{id} ................................ admin.testimonial.destroy › Modules\CMS\Http\Controllers\TestimonialController@destroy
+  GET|HEAD  admin/testimonial/edit/{id} ........................................ admin.testimonial.edit › Modules\CMS\Http\Controllers\TestimonialController@edit
+  POST      admin/testimonial/store .......................................... admin.testimonial.store › Modules\CMS\Http\Controllers\TestimonialController@store
+  POST      admin/testimonial/update/{id} .................................. admin.testimonial.update › Modules\CMS\Http\Controllers\TestimonialController@update
+  GET|HEAD  admin/verify-email/{email}/{token} ...................................................... verify-email › Backend\AuthenticationController@verifyEmail
+  POST      ajax-categories-list ................................................................ ajax-categories-list › Frontend\SelectController@categoriesList
+  GET|HEAD  ajax-event-home ....................................... event.home.ajax.event.list › Modules\Event\Http\Controllers\EventHomeController@ajaxHomeEvent
+  GET|HEAD  ajax-event-list ............................................ event_ajax.event.list › Modules\Event\Http\Controllers\EventHomeController@ajaxEventList
+  POST      ajax-instructor-list ................................................................ ajax-instructor-list › Frontend\SelectController@instructorList
+  GET|HEAD  api/about ........................................................................................................................................... 
+  GET|HEAD  api/accounts ........................................................................................................................................ 
+  GET|HEAD  api/addon ........................................................................................................................................... 
+  GET|HEAD  api/api ............................................................................................................................................. 
+  GET|HEAD  api/blog ............................................................................................................................................ 
+  GET|HEAD  api/brand ........................................................................................................................................... 
+  GET|HEAD  api/certificate ..................................................................................................................................... 
+  GET|HEAD  api/cms ............................................................................................................................................. 
+  GET|HEAD  api/commonquestions ................................................................................................................................. 
+  GET|HEAD  api/contact ......................................................................................................................................... 
+  GET|HEAD  api/course .......................................................................................................................................... 
+  GET|HEAD  api/event ........................................................................................................................................... 
+  GET|HEAD  api/gneai ........................................................................................................................................... 
+  GET|HEAD  api/instructor ...................................................................................................................................... 
+  POST      api/login ....................................................................................................... Api\V1\Student\AuthController@login
+  GET|HEAD  api/offline ......................................................................................................................................... 
+  GET|HEAD  api/order ........................................................................................................................................... 
+  GET|HEAD  api/organization .................................................................................................................................... 
+  GET|HEAD  api/page ............................................................................................................................................ 
+  GET|HEAD  api/payment ......................................................................................................................................... 
+  GET|HEAD  api/payments/status ...................................................... api.payment.status › Modules\Api\Http\Controllers\PaymentController@status
+  GET|HEAD  api/payments/verify/{method} ............................................. api.payment.verify › Modules\Api\Http\Controllers\PaymentController@verify
+  POST      api/payments/verify/{method} ......................................... api.payment.verifyPost › Modules\Api\Http\Controllers\PaymentController@verify
+  POST      api/register ................................................................................................. Api\V1\Student\AuthController@register
+  GET|HEAD  api/report .......................................................................................................................................... 
+  GET|HEAD  api/resources ....................................................................................................................................... 
+  GET|HEAD  api/services ........................................................................................................................................ 
+  GET|HEAD  api/setting ......................................................................................................................................... 
+  GET|HEAD  api/slider .......................................................................................................................................... 
+  GET|HEAD  api/startups ........................................................................................................................................ 
+  GET|HEAD  api/student ......................................................................................................................................... 
+  GET|HEAD  api/user ......................................................................................................... Api\V1\Student\AuthController@user
+  GET|HEAD  api/v1 ............................................................................................. Modules\Api\Http\Controllers\ApiController@index
+  GET|HEAD  api/v1/about-us ............................................................................... page.api.about › Api\V1\Student\AboutController@index
+  POST      api/v1/cart/destroy ............................................................................... cart.api.delete › Frontend\CartController@destroy
+  POST      api/v1/cart/store .................................................................................... cart.api.store › Frontend\CartController@store
+  GET|HEAD  api/v1/carts .......................................................................................... cart.api.list › Frontend\CartController@index
+  POST      api/v1/carts/checkout ...................................................................... cart.api.checkout › Frontend\CheckoutController@checkout
+  GET|HEAD  api/v1/checkout/payment/{user_id}/{course_id}/{payment_name} .......... api.checkout.payment › Modules\Api\Http\Controllers\PaymentController@payment
+  GET|HEAD  api/v1/checkout/{course_id}/{user_id} ........................................ api.checkout › Modules\Api\Http\Controllers\PaymentController@checkout
+  GET|HEAD  api/v1/course/categories ........................... student.api.course.categories › Modules\Api\Http\Controllers\CourseCategoryController@categories
+  GET|HEAD  api/v1/course/categories/{id}/details ... student.api.course.category_details › Modules\Api\Http\Controllers\CourseCategoryController@categoryDetails
+  GET|HEAD  api/v1/course/categories/{id}/list ............ student.api.course.category_list › Modules\Api\Http\Controllers\CourseCategoryController@categoryList
+  GET|HEAD  api/v1/course/{id}/details .................................................... home.api.course.details › Api\V1\Guest\CourseController@courseDetails
+  GET|HEAD  api/v1/courses .................................................................................................. Api\V1\Guest\CourseController@index
+  GET|HEAD  api/v1/general-settings .......................................... app.api.general_settings › Modules\Api\Http\Controllers\AppController@baseSettings
+  GET|HEAD  api/v1/home ....................................................................................................... Api\V1\Guest\HomeController@index
+  GET|HEAD  api/v1/instructor/{id}/details .................................. instructors.api.details › Modules\Api\Http\Controllers\InstructorController@details
+  GET|HEAD  api/v1/instructors .................................................. instructors.api.index › Modules\Api\Http\Controllers\InstructorController@index
+  GET|HEAD  api/v1/payment-list ...................................................................... Modules\Api\Http\Controllers\PaymentController@paymentList
+  GET|HEAD  api/v1/payment/cancel ................................................ webview_payment.cancel › Modules\Api\Http\Controllers\PaymentController@cancel
+  GET|HEAD  api/v1/payment/done ...................................................... webview_payment.done › Modules\Api\Http\Controllers\PaymentController@done
+  GET|HEAD  api/v1/payment/fail ...................................................... webview_payment.fail › Modules\Api\Http\Controllers\PaymentController@fail
+  GET|HEAD  api/v1/see-all-courses .................................................................................. Api\V1\Guest\CourseController@seeAllCourses
+  POST      api/v1/sign-in .................................................................. student.api.sign_in_post › Api\V1\Student\AuthController@signInPost
+  POST      api/v1/sign-up .................................................................. student.api.sign_up_post › Api\V1\Student\AuthController@signUpPost
+  GET|HEAD  api/v1/slider/{id}/details ................................................................................ Api\V1\Guest\HomeController@sliderDetails
+  GET|HEAD  api/v1/student/assignment ................................................................... Modules\Api\Http\Controllers\AssignmentController@index
+  POST      api/v1/student/assignment/store/{assignment_id} ................................... Modules\Api\Http\Controllers\AssignmentController@assignmentStore
+  GET|HEAD  api/v1/student/assignment/{id}/details .......................................... Modules\Api\Http\Controllers\AssignmentController@assignmentDetails
+  GET|HEAD  api/v1/student/bookmark ............................................. student.api.bookmark › Modules\Api\Http\Controllers\BookmarkController@bookmark
+  GET|HEAD  api/v1/student/bookmark/update/{course_id} ........................................... Modules\Api\Http\Controllers\BookmarkController@bookmarkUpdate
+  GET|HEAD  api/v1/student/certificate ................................................................. Modules\Api\Http\Controllers\CertificateController@index
+  GET|HEAD  api/v1/student/certificate/download/{id} ..................................... Modules\Api\Http\Controllers\CertificateController@certificateDownload
+  GET|HEAD  api/v1/student/course-activities .................................. student.api.course_activities › Api\V1\Student\StudentController@courseActivities
+  POST      api/v1/student/course-lecture-progress ........................................................ Api\V1\Student\StudentController@courseEnrollProgress
+  POST      api/v1/student/course-tab-load ............................................................................. Api\V1\Student\StudentController@tabLoad
+  GET|HEAD  api/v1/student/course/{course_id}/{user_id}/learn/lecture ............................... Modules\Api\Http\Controllers\CourseDetailsController@course
+  GET|HEAD  api/v1/student/course/{course_id}/{user_id}/learn/lecture/{lesson_id} .............. Modules\Api\Http\Controllers\CourseDetailsController@courseLearn
+  GET|HEAD  api/v1/student/course/{slug}/learn/lecture/{lesson_id} ...................... student.api.course.learn › Api\V1\Student\StudentController@courseLearn
+  GET|HEAD  api/v1/student/courses ................................................................ student.api.course › Api\V1\Student\StudentController@courses
+  GET|HEAD  api/v1/student/dashboard ...................................................... page.api.about › Modules\Api\Http\Controllers\AppController@dashboard
+  POST      api/v1/student/forgot-password ........................................... student.api.forgot_password › Api\V1\Student\AuthController@forgotPassword
+  GET|HEAD  api/v1/student/leader-board ................................................. student.api.leader_board › Api\V1\Student\StudentController@leaderBoard
+  POST      api/v1/student/logout .................................................................. student.api.logout › Api\V1\Student\StudentController@logout
+  GET|HEAD  api/v1/student/my-learning .................................................... student.api.my_learning › Api\V1\Student\StudentController@myLearning
+  GET|HEAD  api/v1/student/my-profile ....................................................... student.api.my_profile › Api\V1\Student\StudentController@myProfile
+  GET|HEAD  api/v1/student/note/note/create/{lesson_id} ....................................... student.api.note.create › Panel\Student\NoteController@noteCreate
+  GET|HEAD  api/v1/student/note/note/delete/{id} .............................................. student.api.note.delete › Panel\Student\NoteController@noteDelete
+  GET|HEAD  api/v1/student/note/note/edit/{id} .................................................... student.api.note.edit › Panel\Student\NoteController@noteEdit
+  POST      api/v1/student/note/note/store/{lesson_id} .......................................... student.api.note.store › Panel\Student\NoteController@noteStore
+  POST      api/v1/student/note/note/update/{id} .............................................. student.api.note.update › Panel\Student\NoteController@noteUpdate
+  GET|HEAD  api/v1/student/profile ............................................................... student.api.profile › Api\V1\Student\StudentController@profile
+  GET|HEAD  api/v1/student/quiz/answer-list/{lesson_id} ....................................... student.api.answer.list › Panel\Student\QuizController@answerList
+  GET|HEAD  api/v1/student/quiz/question-load/{quiz_id} ............................................................... Panel\Student\QuizController@questionLoad
+  POST      api/v1/student/quiz/question-submit ............................................... student.api.quiz.submit › Panel\Student\QuizController@quizSubmit
+  GET|HEAD  api/v1/student/quiz/question-up/{quiz_id} ................................................................... Panel\Student\QuizController@questionUp
+  GET|HEAD  api/v1/student/quiz/quiz/start/{lesson_id} .......................................... student.api.quiz.start › Panel\Student\QuizController@quizStart
+  GET|HEAD  api/v1/student/quiz/quiz/{lesson_id} ........................................................... student.api.quiz › Panel\Student\QuizController@quiz
+  POST      api/v1/student/reset-password .............................................. student.api.reset_password › Api\V1\Student\AuthController@resetPassword
+  GET|HEAD  api/v1/student/review/review/create/{course_id} ............................. student.api.review.create › Panel\Student\ReviewController@reviewCreate
+  GET|HEAD  api/v1/student/review/review/delete/{id} .................................... student.api.review.delete › Panel\Student\ReviewController@reviewDelete
+  GET|HEAD  api/v1/student/review/review/edit/{id} .......................................... student.api.review.edit › Panel\Student\ReviewController@reviewEdit
+  POST      api/v1/student/review/review/store/{course_id} ................................ student.api.review.store › Panel\Student\ReviewController@reviewStore
+  POST      api/v1/student/review/review/update/{id} .................................... student.api.review.update › Panel\Student\ReviewController@reviewUpdate
+  GET|HEAD  api/v1/student/setting/add-experience .............................. student.api.add.experience › Panel\Instructor\ExperienceController@addExperience
+  GET|HEAD  api/v1/student/setting/add-skills ................................... student.api.add.skill › Modules\Api\Http\Controllers\ProfileController@addSkill
+  GET|HEAD  api/v1/student/setting/delete-experience/{key} ............... student.api.delete.experience › Panel\Instructor\ExperienceController@deleteExperience
+  GET|HEAD  api/v1/student/setting/delete-institute/{key} ...................... student.api.delete.institute › Panel\Student\EducationController@deleteInstitute
+  GET|HEAD  api/v1/student/setting/edit-experience/{key} ..................... student.api.edit.experience › Panel\Instructor\ExperienceController@editExperience
+  GET|HEAD  api/v1/student/setting/edit-institute/{key} ............................ student.api.edit.institute › Panel\Student\EducationController@editInstitute
+  POST      api/v1/student/setting/store-experience ........................ student.api.store.experience › Panel\Instructor\ExperienceController@storeExperience
+  POST      api/v1/student/setting/store-institute ............................... student.api.store.institute › Panel\Student\EducationController@storeInstitute
+  POST      api/v1/student/setting/store-skills ............................. student.api.store.skill › Modules\Api\Http\Controllers\ProfileController@storeSkill
+  POST      api/v1/student/setting/update-experience/{key} ............... student.api.update.experience › Panel\Instructor\ExperienceController@updateExperience
+  POST      api/v1/student/setting/update-institute/{key} ...................... student.api.update.institute › Panel\Student\EducationController@updateInstitute
+  POST      api/v1/student/setting/update-password .................. student.api.update_password › Modules\Api\Http\Controllers\ProfileController@updatePassword
+  POST      api/v1/student/setting/update-profile ..................... student.api.update_profile › Modules\Api\Http\Controllers\ProfileController@updateProfile
+  POST      api/v1/student/verify-email .................................................... student.api.verify_email › Api\V1\Student\AuthController@verifyEmail
+  POST      api/v1/student/verify-otp ........................................................... student.api.verifyOTP › Api\V1\Student\AuthController@verifyOTP
+  GET|HEAD  api/web/v1/cart/breadcrumb ..................................................................... cart.breadcrumb › Frontend\CartController@breadcrumb
+  GET|HEAD  api/web/v1/cart/recommended-courses ............................................ cart.recommendedCourses › Frontend\CartController@recommendedCourses
+  GET|HEAD  api/web/v1/cart/shopping-cart .............................................................. cart.shoppingCart › Frontend\CartController@shoppingCart
+  GET|HEAD  api/web/v1/contact/get-in-touch .......................................................... contact.getInTouch › Frontend\ContactController@getInTouch
+  GET|HEAD  api/web/v1/contact/map ................................................................................. contact.map › Frontend\ContactController@map
+  GET|HEAD  api/web/v1/contact/social-link ........................................................... contact.socialLink › Frontend\ContactController@socialLink
+  GET|HEAD  api/web/v1/courses/breadcrumb ............................................................. courses.breadcrumb › Frontend\CourseController@breadcrumb
+  GET|HEAD  api/web/v1/courses/course-list ............................................................ courses.courseList › Frontend\CourseController@courseList
+  GET|HEAD  become-student ..................................................................................... becomeStudent › FrontendController@becomeStudent
+  GET|HEAD  blog/{id}/details .................................................................................... blog_details › Frontend\BlogController@details
+  GET|HEAD  blogs ......................................................................................................... blogs › Frontend\BlogController@index
+  GET|HEAD  cache-clear ......................................................................................................................................... 
+  GET|HEAD  cart ..................................................................................................... cart.index › Frontend\CartController@index
+  GET|HEAD  cart/add ..................................................................................................... cart.add › Frontend\CartController@add
+  GET|HEAD  cart/remove/{id} ....................................................................................... cart.remove › Frontend\CartController@remove
+  GET|HEAD  category ..................................................................................... frontend.category › Frontend\CourseController@category
+  GET|HEAD  certificate ......................................................................... front.certificateView › Frontend\HomeController@certificateView
+  GET|HEAD  certificate-tracking ................................................................... front.certificate › Frontend\HomeController@certificateTrack
+  POST      change-language .......................................................................... change-language › Frontend\SelectController@changeLanguage
+  POST      change-theme .................................................................................... changeTheme › Backend\SettingController@changeTheme
+  GET|HEAD  checkout ......................................................................................... checkout.index › Frontend\CheckoutController@index
+  POST      checkout/payment ............................................................................. checkout.payment › Frontend\CheckoutController@payment
+  GET|HEAD  commonquestions ............................................................ Modules\CommonQuestions\Http\Controllers\CommonQuestionsController@index
+  POST      contact ................................................................................ frontend.contact_us.store › Frontend\ContactController@store
+  GET|HEAD  contact/us ................................................................................... frontend.contact_us › Frontend\ContactController@index
+  GET|HEAD  course-details ............................................................................... courseDetails › Frontend\CourseDetailsController@index
+  GET|HEAD  course-details/{slug} ............................................................... frontend.courseDetails › Frontend\CourseDetailsController@index
+  GET|HEAD  courses ................................................................................................... courses › Frontend\CourseController@index
+  GET|HEAD  courses/filter ............................................................................................... Frontend\CourseController@filterCourse
+  GET|HEAD  dashboard ............................................................................................. dashboard › Backend\DashboardController@index
+  GET|HEAD  email-setting ......................................................................... settings.mail-setting › Backend\SettingController@mailSetting
+  POST      email-setting ................................................................... settings.mail-setting › Backend\SettingController@updateMailSetting
+  GET|HEAD  email/send/verify/{id} ................................................................ send.verification.verify › Frontend\AuthController@sendVerify
+  GET|HEAD  email/verify ................................................................................... verification.notice › Frontend\AuthController@verify
+  GET|HEAD  event .......................................................... event.home.event.list › Modules\Event\Http\Controllers\EventHomeController@eventList
+  GET|HEAD  event/checkout ......................................... frontend.event.checkout.index › Modules\Event\Http\Controllers\EventCheckoutController@index
+  GET|HEAD  event/checkout/join-event .............................. frontend.event.join.event › Modules\Event\Http\Controllers\EventCheckoutController@joinEvent
+  POST      event/checkout/payment ............................. frontend.event.checkout.payment › Modules\Event\Http\Controllers\EventCheckoutController@payment
+  GET|HEAD  event/details/{slug} ................................................... event.home.details › Modules\Event\Http\Controllers\EventHomeController@show
+  GET|HEAD  event_payments/status ................................................................. payment.event_status › Frontend\PaymentController@eventStatus
+  GET|HEAD  event_payments/verify/{method} ........................................................ payment.event_verify › Frontend\PaymentController@eventVerify
+  POST      event_payments/verify/{method} .................................................... payment.event_verifyPost › Frontend\PaymentController@eventVerify
+  GET|HEAD  forgot-password ................................................................... frontend.forgot_password › Frontend\AuthController@forgotPassword
+  POST      forgot-password .......................................................... frontend.forgot_password_post › Frontend\AuthController@forgotPasswordPost
+  GET|HEAD  frontend/bookmark .......................................................................... frontend.bookmark › Frontend\BookmarkController@bookmark
+  GET|HEAD  frontend/bookmark/added/{course_id} ....................................................................... Frontend\BookmarkController@bookmarkStore
+  GET|HEAD  frontend/bookmark/remove/{course_id} ..................................................................... Frontend\BookmarkController@bookmarkRemove
+  GET|HEAD  general-settings .............................................................. settings.general-settings › Backend\SettingController@generalSettings
+  POST      general-settings ......................................................... settings.general-settings › Backend\SettingController@updateGeneralSetting
+  GET|HEAD  home/ajax/become-an-instructor ............................................. homepage.becomeAnInstructor › Frontend\HomeController@becomeAnInstructor
+  GET|HEAD  home/ajax/best-rated-courses ............................................................................... Frontend\HomeController@bestRatedCourses
+  GET|HEAD  home/ajax/blogs ...................................................................................... homepage.blogs › Frontend\HomeController@blogs
+  GET|HEAD  home/ajax/brands ................................................................................... homepage.brands › Frontend\HomeController@brands
+  GET|HEAD  home/ajax/discount-courses .................................................................................. Frontend\HomeController@discountCourses
+  GET|HEAD  home/ajax/educational-events ................................................. homepage.educationalEvents › Frontend\HomeController@educationalEvents
+  GET|HEAD  home/ajax/featured-courses ....................................................... homepage.featuredCourses › Frontend\HomeController@featuredCourses
+  GET|HEAD  home/ajax/home-sliders ................................................................... homepage.homeSliders › Frontend\HomeController@homeSliders
+  GET|HEAD  home/ajax/latest-courses ............................................................. homepage.latestCourses › Frontend\HomeController@latestCourses
+  GET|HEAD  home/ajax/menu-categories .................................................................................... Frontend\HomeController@menuCategories
+  GET|HEAD  home/ajax/most-popular-courses ........................................................................... Frontend\HomeController@mostPopularCourses
+  GET|HEAD  home/ajax/popular-category ....................................................... homepage.popularCategory › Frontend\HomeController@popularCategory
+  GET|HEAD  home/ajax/testimonials ................................................................. homepage.testimonials › Frontend\HomeController@testimonials
+  GET|HEAD  in/{username} .................................................................................... share.profile › Frontend\ProfileController@profile
+  GET|HEAD  instractors ............................................................................... instractors › Panel\Instructor\InstructorController@index
+  GET|HEAD  instructor-details ................................................................ instructorDetails › Panel\Instructor\InstructorController@details
+  GET|HEAD  instructor/add-assignment/{id} ............................................. instructor.assignment.add › Panel\Instructor\AssignmentController@create
+  GET|HEAD  instructor/add-course ........................................................... instructor.add_course › Panel\Instructor\CourseController@addCourse
+  GET|HEAD  instructor/add-lesson/{id} ......................................................... instructor.lesson.add › Panel\Instructor\LessonController@create
+  GET|HEAD  instructor/add-noticeboard/{id} .......................................... instructor.noticeboard.add › Panel\Instructor\NoticeBoardController@create
+  GET|HEAD  instructor/add-question/{id} ................................................... instructor.question.add › Panel\Instructor\QuestionController@create
+  GET|HEAD  instructor/add-section/{slug} .................................................... instructor.section.add › Panel\Instructor\SectionController@create
+  GET|HEAD  instructor/ai-support ............................................................ instructor.ai_support › Panel\Instructor\AISupportController@index
+  POST      instructor/ai-support/search ............................................. instructor.ai_support.search › Panel\Instructor\AISupportController@search
+  GET|HEAD  instructor/assignment-list ................................................ instructor.assignment.index › Panel\Instructor\AssignmentController@index
+  GET|HEAD  instructor/assignment-view/{id} ............................................. instructor.assignment.view › Panel\Instructor\AssignmentController@view
+  GET|HEAD  instructor/assignment/download/{assignment_id} ............ instructor.assignment.download › Panel\Instructor\AssignmentController@assignmentDownload
+  POST      instructor/assignment/marks/{id} .......................................... instructor.assignment.marks › Panel\Instructor\AssignmentController@marks
+  GET|HEAD  instructor/assignment/review/{id} ....................................... instructor.assignment.review › Panel\Instructor\AssignmentController@review
+  GET|HEAD  instructor/assignment/submission-download/{assignment_id} instructor.assignment_submission.download › Panel\Instructor\AssignmentController@assignme…
+  GET|HEAD  instructor/assignment/submission/{id} ........................... instructor.assignment.submission › Panel\Instructor\AssignmentController@submission
+  GET|HEAD  instructor/become-instructor .......................................... becomeInstructor › Panel\Instructor\InstructorAuthController@becomeInstructor
+  GET|HEAD  instructor/course-activity ........................................ instructor.course_activity › Panel\Instructor\InstructorController@courseActivity
+  GET|HEAD  instructor/course-review ................................................ instructor.course_reviews › Panel\Instructor\CourseController@courseReviews
+  GET|HEAD  instructor/course-sales ........................................................... instructor.course_sales › Panel\Instructor\CourseController@sales
+  GET|HEAD  instructor/course/assignment/{id} .......................... ajax.instructor.course.assignment › Panel\Instructor\AssignmentController@ajaxAssignment
+  GET|HEAD  instructor/course/noticeboard/{id} ...................... ajax.instructor.course.noticeboard › Panel\Instructor\NoticeBoardController@ajaxNoticeBoard
+  GET|HEAD  instructor/dashboard ......................................................... instructor.dashboard › Panel\Instructor\InstructorController@dashboard
+  GET|HEAD  instructor/delete-assignment/{id} ...................................... instructor.assignment.delete › Panel\Instructor\AssignmentController@destroy
+  GET|HEAD  instructor/delete-course/{id} ............................................. instructor.course.delete › Panel\Instructor\CourseController@deleteCourse
+  GET|HEAD  instructor/delete-lesson/{id} .................................................. instructor.lesson.delete › Panel\Instructor\LessonController@destroy
+  GET|HEAD  instructor/delete-noticeboard/{id} ................................... instructor.noticeboard.delete › Panel\Instructor\NoticeBoardController@destroy
+  GET|HEAD  instructor/delete-question/{id} ............................................ instructor.question.delete › Panel\Instructor\QuestionController@destroy
+  GET|HEAD  instructor/delete-section/{id} ............................................... instructor.section.delete › Panel\Instructor\SectionController@destroy
+  GET|HEAD  instructor/details/{name}/{id} .................................................. frontend.instructor.details › Frontend\InstructorController@details
+  GET|HEAD  instructor/edit-assignment/{id} ............................................. instructor.assignment.edit › Panel\Instructor\AssignmentController@edit
+  GET|HEAD  instructor/edit-course/{slug} ................................................. instructor.course.edit › Panel\Instructor\CourseController@editCourse
+  GET|HEAD  instructor/edit-lesson/{id} ......................................................... instructor.lesson.edit › Panel\Instructor\LessonController@edit
+  GET|HEAD  instructor/edit-noticeboard/{id} .......................................... instructor.noticeboard.edit › Panel\Instructor\NoticeBoardController@edit
+  GET|HEAD  instructor/edit-question/{id} ................................................... instructor.question.edit › Panel\Instructor\QuestionController@edit
+  GET|HEAD  instructor/edit-section/{id} ...................................................... instructor.section.edit › Panel\Instructor\SectionController@edit
+  GET|HEAD  instructor/enrolled-students ....................................... instructor.enrolled_students › Panel\Instructor\CourseController@enrolledStudent
+  GET|HEAD  instructor/filter .................................................................................... Frontend\InstructorController@filterInstructor
+  GET|HEAD  instructor/financial-summary .................................. instructor.financial_summary › Panel\Instructor\InstructorController@financialSummary
+  GET|HEAD  instructor/financial/payment-settings ..... instructor.payout_settings › Modules\Organization\Http\Controllers\PaymentMethodController@payoutSettings
+  GET|HEAD  instructor/financial/payment-settings/add ...... instructor.payment_method.add › Modules\Organization\Http\Controllers\PaymentMethodController@create
+  GET|HEAD  instructor/financial/payment-settings/delete/{id} instructor.payment_method.delete › Modules\Organization\Http\Controllers\PaymentMethodController@d…
+  GET|HEAD  instructor/financial/payment-settings/edit/{id} . instructor.payment_method.edit › Modules\Organization\Http\Controllers\PaymentMethodController@edit
+  POST      instructor/financial/payment-settings/store ... instructor.payment_method.store › Modules\Organization\Http\Controllers\PaymentMethodController@store
+  POST      instructor/financial/payment-settings/update/{id} instructor.payment_method.update › Modules\Organization\Http\Controllers\PaymentMethodController@u…
+  GET|HEAD  instructor/financial/payout-details/{id} ............................. instructor.payout_details › Panel\Instructor\FinancialController@payoutDetails
+  GET|HEAD  instructor/financial/payout-request .................................. instructor.payout_request › Panel\Instructor\FinancialController@payoutRequest
+  POST      instructor/financial/payout-request ....................... instructor.payout_request.store › Panel\Instructor\FinancialController@payoutRequestStore
+  GET|HEAD  instructor/financial/payouts ............................................. instructor.payouts_list › Panel\Instructor\FinancialController@payoutsList
+  GET|HEAD  instructor/financial/sales-report/course .......................... instructor.sales_report.course › Panel\Instructor\FinancialController@salesReport
+  GET|HEAD  instructor/financial/sales-report/course/download instructor.sales_report.course.download › Panel\Instructor\FinancialController@salesReportDownload
+  GET|HEAD  instructor/invoice/download/{id} ..................................................... instructor.invoice.download › Panel\InvoiceController@download
+  GET|HEAD  instructor/invoice/instructor/view/{id} ............................................ instructor.invoice.view › Panel\InvoiceController@instructorView
+  GET|HEAD  instructor/list ........................................................................... frontend.instructor › Frontend\InstructorController@index
+  POST      instructor/logout .................................................................. instructor.logout › Panel\Instructor\InstructorController@logout
+  POST      instructor/monthly-sales .............................................. instructor.monthly_sales › Panel\Instructor\InstructorController@monthlySales
+  GET|HEAD  instructor/my-courses ................................................................ instructor.courses › Panel\Instructor\CourseController@courses
+  GET|HEAD  instructor/notification ................................................ instructor.notification › Panel\Instructor\InstructorController@notification
+  GET|HEAD  instructor/organization/courses .................. instructor.organization.courses › Modules\Organization\Http\Controllers\InstructorController@index
+  GET|HEAD  instructor/playlist ............................................................ instructor.playlist › Panel\Instructor\InstructorController@playlist
+  GET|HEAD  instructor/profile ............................................................... instructor.profile › Panel\Instructor\InstructorController@profile
+  GET|HEAD  instructor/quiz-list .............................................................. instructor.quiz.index › Panel\Instructor\QuestionController@index
+  GET|HEAD  instructor/quiz/submission/{id} ......................................... instructor.quiz.submission › Panel\Instructor\QuestionController@submission
+  GET|HEAD  instructor/quiz/view/{id} ........................................................... instructor.quiz.view › Panel\Instructor\QuestionController@view
+  GET|HEAD  instructor/setting/add-experience ................................... instructor.add.experience › Panel\Instructor\ExperienceController@addExperience
+  GET|HEAD  instructor/setting/add-institute ........................................ instructor.addInstitute › Panel\Instructor\EducationController@addInstitute
+  GET|HEAD  instructor/setting/add-skills ................................................... instructor.add.skill › Panel\Instructor\SettingsController@addSkill
+  GET|HEAD  instructor/setting/delete-experience/{key} .................... instructor.delete.experience › Panel\Instructor\ExperienceController@deleteExperience
+  GET|HEAD  instructor/setting/delete-institute/{key} ........................ instructor.delete.institute › Panel\Instructor\EducationController@deleteInstitute
+  GET|HEAD  instructor/setting/edit-experience/{key} .......................... instructor.edit.experience › Panel\Instructor\ExperienceController@editExperience
+  GET|HEAD  instructor/setting/edit-institute/{key} .............................. instructor.edit.institute › Panel\Instructor\EducationController@editInstitute
+  GET|HEAD  instructor/setting/profile/{slug?} ................................................. instructor.setting › Panel\Instructor\SettingsController@setting
+  POST      instructor/setting/store-experience ............................. instructor.store.experience › Panel\Instructor\ExperienceController@storeExperience
+  POST      instructor/setting/store-institute ................................. instructor.store.institute › Panel\Instructor\EducationController@storeInstitute
+  POST      instructor/setting/store-skills ............................................. instructor.store.skill › Panel\Instructor\SettingsController@storeSkill
+  POST      instructor/setting/update-experience/{key} .................... instructor.update.experience › Panel\Instructor\ExperienceController@updateExperience
+  POST      instructor/setting/update-institute/{key} ........................ instructor.update.institute › Panel\Instructor\EducationController@updateInstitute
+  POST      instructor/setting/update-password .................................. instructor.update_password › Panel\Instructor\SettingsController@updatePassword
+  POST      instructor/setting/update-profile ..................................... instructor.update_profile › Panel\Instructor\SettingsController@updateProfile
+  POST      instructor/sign-up ............................................................ instructor.sign_up › Panel\Instructor\InstructorAuthController@signUp
+  POST      instructor/sortable-lesson/{id} ............................................. instructor.lesson.sortable › Panel\Instructor\LessonController@sortable
+  POST      instructor/sortable-question/{id} ....................................... instructor.question.sortable › Panel\Instructor\QuestionController@sortable
+  POST      instructor/sortable-section/{id} .......................................... instructor.section.sortable › Panel\Instructor\SectionController@sortable
+  POST      instructor/store-assignment/{id} .......................................... instructor.assignment.store › Panel\Instructor\AssignmentController@store
+  POST      instructor/store-course ..................................................... instructor.course.store › Panel\Instructor\CourseController@storeCourse
+  POST      instructor/store-lesson/{id} ...................................................... instructor.lesson.store › Panel\Instructor\LessonController@store
+  POST      instructor/store-noticeboard/{id} ....................................... instructor.noticeboard.store › Panel\Instructor\NoticeBoardController@store
+  POST      instructor/store-question/{id} ................................................ instructor.question.store › Panel\Instructor\QuestionController@store
+  POST      instructor/store-section/{slug} ................................................. instructor.section.store › Panel\Instructor\SectionController@store
+  POST      instructor/update-assignment/{id} ....................................... instructor.assignment.update › Panel\Instructor\AssignmentController@update
+  POST      instructor/update-course/{slug} ........................................... instructor.course.update › Panel\Instructor\CourseController@updateCourse
+  POST      instructor/update-lesson/{id} ................................................... instructor.lesson.update › Panel\Instructor\LessonController@update
+  POST      instructor/update-noticeboard/{id} .................................... instructor.noticeboard.update › Panel\Instructor\NoticeBoardController@update
+  POST      instructor/update-question/{id} ............................................. instructor.question.update › Panel\Instructor\QuestionController@update
+  POST      instructor/update-section/{id} ................................................ instructor.section.update › Panel\Instructor\SectionController@update
+  GET|HEAD  instructor/upload-course .............................................. instructor.upload_course › Panel\Instructor\InstructorController@uploadCourse
+  GET|HEAD  languages ........................................................................................ languages.index › Backend\LanguageController@index
+  GET|HEAD  languages/change ....................................................................... languages.change › Backend\LanguageController@changeLanguage
+  GET|HEAD  languages/change-module ........................................................... languages.change.module › Backend\LanguageController@changeModule
+  GET|HEAD  languages/create ............................................................................... languages.create › Backend\LanguageController@create
+  DELETE    languages/delete/{id} .......................................................................... languages.delete › Backend\LanguageController@delete
+  GET|HEAD  languages/edit/{id} ................................................................................ languages.edit › Backend\LanguageController@edit
+  POST      languages/store .................................................................................. languages.store › Backend\LanguageController@store
+  GET|HEAD  languages/terms/{id} ........................................................................ languages.edit.terms › Backend\LanguageController@terms
+  PUT       languages/update/terms/{code} ....................................................... languages.update.terms › Backend\LanguageController@termsUpdate
+  PUT       languages/update/{id} .......................................................................... languages.update › Backend\LanguageController@update
+  GET|HEAD  link-storage ........................................................................................................................................ 
+  POST      logout ............................................................................................. logout › Backend\AuthenticationController@logout
+  GET|HEAD  my/password/update ...................................................................... passwordUpdate › Backend\MyProfileController@passwordUpdate
+  PUT       my/password/update/store ...................................................... passwordUpdateStore › Backend\MyProfileController@passwordUpdateStore
+  GET|HEAD  my/profile ......................................................................................... my.profile › Backend\MyProfileController@profile
+  GET|HEAD  my/profile/edit .................................................................................. my.profile.edit › Backend\MyProfileController@edit
+  PUT       my/profile/update ............................................................................ my.profile.update › Backend\MyProfileController@update
+  GET|HEAD  organization/add-assignment/{id} .................... organization.assignment.add › Modules\Organization\Http\Controllers\AssignmentController@create
+  GET|HEAD  organization/add-course .................................. organization.add_course › Modules\Organization\Http\Controllers\CourseController@addCourse
+  GET|HEAD  organization/add-experience/{id} .. organization.instructor.add.experience › Modules\Organization\Http\Controllers\ExperienceController@addExperience
+  GET|HEAD  organization/add-institute/{id} ....... organization.instructor.addInstitute › Modules\Organization\Http\Controllers\EducationController@addInstitute
+  GET|HEAD  organization/add-lesson/{id} ................................ organization.lesson.add › Modules\Organization\Http\Controllers\LessonController@create
+  GET|HEAD  organization/add-noticeboard/{id} ................. organization.noticeboard.add › Modules\Organization\Http\Controllers\NoticeBoardController@create
+  GET|HEAD  organization/add-question/{id} .......................... organization.question.add › Modules\Organization\Http\Controllers\QuestionController@create
+  GET|HEAD  organization/add-section/{slug} ........................... organization.section.add › Modules\Organization\Http\Controllers\SectionController@create
+  GET|HEAD  organization/ai-support ................................... organization.ai_support › Modules\Organization\Http\Controllers\AISupportController@index
+  POST      organization/ai-support/search .................... organization.ai_support.search › Modules\Organization\Http\Controllers\AISupportController@search
+  GET|HEAD  organization/assignment-list ....................... organization.assignment.index › Modules\Organization\Http\Controllers\AssignmentController@index
+  GET|HEAD  organization/assignment-view/{id} .................... organization.assignment.view › Modules\Organization\Http\Controllers\AssignmentController@view
+  GET|HEAD  organization/assignment/download/{assignment_id} organization.assignment.download › Modules\Organization\Http\Controllers\AssignmentController@assig…
+  POST      organization/assignment/marks/{id} ................. organization.assignment.marks › Modules\Organization\Http\Controllers\AssignmentController@marks
+  GET|HEAD  organization/assignment/review/{id} .............. organization.assignment.review › Modules\Organization\Http\Controllers\AssignmentController@review
+  GET|HEAD  organization/assignment/submission-download/{assignment_id} organization.assignment_submission.download › Modules\Organization\Http\Controllers\Assi…
+  GET|HEAD  organization/assignment/submission/{id} .. organization.assignment.submission › Modules\Organization\Http\Controllers\AssignmentController@submission
+  GET|HEAD  organization/become-organization frontend.organization.create › Modules\Organization\Http\Controllers\OrganizationFrontController@becomeOrganization
+  GET|HEAD  organization/course-review ....................... organization.course_reviews › Modules\Organization\Http\Controllers\CourseController@courseReviews
+  GET|HEAD  organization/course-sales .................................. organization.course_sales › Modules\Organization\Http\Controllers\CourseController@sales
+  GET|HEAD  organization/course/assignment/{id} . ajax.organization.course.assignment › Modules\Organization\Http\Controllers\AssignmentController@ajaxAssignment
+  GET|HEAD  organization/course/noticeboard/{id} ajax.organization.course.noticeboard › Modules\Organization\Http\Controllers\NoticeBoardController@ajaxNoticeBo…
+  GET|HEAD  organization/dashboard ......................... organization.dashboard › Modules\Organization\Http\Controllers\OrganizationPanelController@dashboard
+  GET|HEAD  organization/delete-assignment/{id} ............. organization.assignment.delete › Modules\Organization\Http\Controllers\AssignmentController@destroy
+  GET|HEAD  organization/delete-course/{id} .................... organization.course.delete › Modules\Organization\Http\Controllers\CourseController@deleteCourse
+  GET|HEAD  organization/delete-experience/{key}/{id} organization.instructor.delete.experience › Modules\Organization\Http\Controllers\ExperienceController@del…
+  GET|HEAD  organization/delete-institute/{key}/{id} organization.instructor.delete.institute › Modules\Organization\Http\Controllers\EducationController@delete…
+  GET|HEAD  organization/delete-lesson/{id} ......................... organization.lesson.delete › Modules\Organization\Http\Controllers\LessonController@destroy
+  GET|HEAD  organization/delete-noticeboard/{id} .......... organization.noticeboard.delete › Modules\Organization\Http\Controllers\NoticeBoardController@destroy
+  GET|HEAD  organization/delete-question/{id} ................... organization.question.delete › Modules\Organization\Http\Controllers\QuestionController@destroy
+  GET|HEAD  organization/delete-section/{id} ...................... organization.section.delete › Modules\Organization\Http\Controllers\SectionController@destroy
+  GET|HEAD  organization/details/{name}/{id} .......... frontend.organization.details › Modules\Organization\Http\Controllers\OrganizationFrontController@details
+  GET|HEAD  organization/edit-assignment/{id} .................... organization.assignment.edit › Modules\Organization\Http\Controllers\AssignmentController@edit
+  GET|HEAD  organization/edit-course/{slug} ........................ organization.course.edit › Modules\Organization\Http\Controllers\CourseController@editCourse
+  GET|HEAD  organization/edit-experience/{key}/{id} organization.instructor.edit.experience › Modules\Organization\Http\Controllers\ExperienceController@editExp…
+  GET|HEAD  organization/edit-institute/{key}/{id} organization.instructor.edit.institute › Modules\Organization\Http\Controllers\EducationController@editInstit…
+  GET|HEAD  organization/edit-lesson/{id} ................................ organization.lesson.edit › Modules\Organization\Http\Controllers\LessonController@edit
+  GET|HEAD  organization/edit-noticeboard/{id} ................. organization.noticeboard.edit › Modules\Organization\Http\Controllers\NoticeBoardController@edit
+  GET|HEAD  organization/edit-question/{id} .......................... organization.question.edit › Modules\Organization\Http\Controllers\QuestionController@edit
+  GET|HEAD  organization/edit-section/{id} ............................. organization.section.edit › Modules\Organization\Http\Controllers\SectionController@edit
+  GET|HEAD  organization/enrolled-students .............. organization.enrolled_students › Modules\Organization\Http\Controllers\CourseController@enrolledStudent
+  GET|HEAD  organization/financial/payment-settings . organization.payout_settings › Modules\Organization\Http\Controllers\PaymentMethodController@payoutSettings
+  GET|HEAD  organization/financial/payment-settings/add .. organization.payment_method.add › Modules\Organization\Http\Controllers\PaymentMethodController@create
+  GET|HEAD  organization/financial/payment-settings/delete/{id} organization.payment_method.delete › Modules\Organization\Http\Controllers\PaymentMethodControll…
+  GET|HEAD  organization/financial/payment-settings/edit/{id} organization.payment_method.edit › Modules\Organization\Http\Controllers\PaymentMethodController@e…
+  POST      organization/financial/payment-settings/store organization.payment_method.store › Modules\Organization\Http\Controllers\PaymentMethodController@store
+  POST      organization/financial/payment-settings/update/{id} organization.payment_method.update › Modules\Organization\Http\Controllers\PaymentMethodControll…
+  GET|HEAD  organization/financial/payout-details/{id} .... organization.payout_details › Modules\Organization\Http\Controllers\FinancialController@payoutDetails
+  GET|HEAD  organization/financial/payout-request ......... organization.payout_request › Modules\Organization\Http\Controllers\FinancialController@payoutRequest
+  POST      organization/financial/payout-request organization.payout_request.store › Modules\Organization\Http\Controllers\FinancialController@payoutRequestSto…
+  GET|HEAD  organization/financial/payouts .................... organization.payouts_list › Modules\Organization\Http\Controllers\FinancialController@payoutsList
+  GET|HEAD  organization/financial/sales-report/course . organization.sales_report.course › Modules\Organization\Http\Controllers\FinancialController@salesReport
+  GET|HEAD  organization/financial/sales-report/course/download organization.sales_report.course.download › Modules\Organization\Http\Controllers\FinancialContr…
+  GET|HEAD  organization/instructor ................. organization.instructor › Modules\Organization\Http\Controllers\OrganizationPanelController@instructorIndex
+  GET|HEAD  organization/instructor/add ........ organization.instructor.add › Modules\Organization\Http\Controllers\OrganizationPanelController@instructorCreate
+  GET|HEAD  organization/instructor/add-skills/{id} organization.instructor.add.skill › Modules\Organization\Http\Controllers\OrganizationPanelController@addIns…
+  GET|HEAD  organization/instructor/approve/{id} organization.instructor.approve › Modules\Organization\Http\Controllers\OrganizationPanelController@instructorA…
+  GET|HEAD  organization/instructor/delete/{id} organization.instructor.delete › Modules\Organization\Http\Controllers\OrganizationPanelController@instructorDel…
+  GET|HEAD  organization/instructor/edit/{id}/{slug} organization.instructor.edit › Modules\Organization\Http\Controllers\OrganizationPanelController@instructor…
+  POST      organization/instructor/store ..... organization.instructor.store › Modules\Organization\Http\Controllers\OrganizationPanelController@instructorStore
+  POST      organization/instructor/store-skills/{id} organization.instructor.store.skill › Modules\Organization\Http\Controllers\OrganizationPanelController@st…
+  GET|HEAD  organization/instructor/suspend/{id} organization.instructor.suspend › Modules\Organization\Http\Controllers\OrganizationPanelController@instructorS…
+  POST      organization/instructor/update-password/{id} organization.instructor.update_password › Modules\Organization\Http\Controllers\OrganizationPanelContro…
+  POST      organization/instructor/update-profile/{id} organization.instructor.update_profile › Modules\Organization\Http\Controllers\OrganizationPanelControll…
+  GET|HEAD  organization/invoice/download/{id} ................. organization.invoice.download › Modules\Organization\Http\Controllers\InvoiceController@download
+  GET|HEAD  organization/invoice/organization/view/{id} .... organization.invoice.view › Modules\Organization\Http\Controllers\InvoiceController@organizationView
+  POST      organization/logout .................................. organization.logout › Modules\Organization\Http\Controllers\OrganizationPanelController@logout
+  POST      organization/monthly-sales .............. organization.monthly_sales › Modules\Organization\Http\Controllers\OrganizationPanelController@monthlySales
+  GET|HEAD  organization/my-courses ....................................... organization.courses › Modules\Organization\Http\Controllers\CourseController@courses
+  POST      organization/organization-store .............. frontend.organization.store › Modules\Organization\Http\Controllers\OrganizationFrontController@signUp
+  GET|HEAD  organization/profile ............................... organization.profile › Modules\Organization\Http\Controllers\OrganizationPanelController@profile
+  GET|HEAD  organization/quiz-list ..................................... organization.quiz.index › Modules\Organization\Http\Controllers\QuestionController@index
+  GET|HEAD  organization/quiz/submission/{id} ................ organization.quiz.submission › Modules\Organization\Http\Controllers\QuestionController@submission
+  GET|HEAD  organization/quiz/view/{id} .................................. organization.quiz.view › Modules\Organization\Http\Controllers\QuestionController@view
+  GET|HEAD  organization/setting/add-skills .......................... organization.add.skill › Modules\Organization\Http\Controllers\SettingsController@addSkill
+  GET|HEAD  organization/setting/profile/{slug?} ........................ organization.setting › Modules\Organization\Http\Controllers\SettingsController@setting
+  POST      organization/setting/store-skills .................... organization.store.skill › Modules\Organization\Http\Controllers\SettingsController@storeSkill
+  POST      organization/setting/update-password ......... organization.update_password › Modules\Organization\Http\Controllers\SettingsController@updatePassword
+  POST      organization/setting/update-profile ............ organization.update_profile › Modules\Organization\Http\Controllers\SettingsController@updateProfile
+  POST      organization/sortable-lesson/{id} .................... organization.lesson.sortable › Modules\Organization\Http\Controllers\LessonController@sortable
+  POST      organization/sortable-question/{id} .............. organization.question.sortable › Modules\Organization\Http\Controllers\QuestionController@sortable
+  POST      organization/sortable-section/{id} ................. organization.section.sortable › Modules\Organization\Http\Controllers\SectionController@sortable
+  POST      organization/store-assignment/{id} ................. organization.assignment.store › Modules\Organization\Http\Controllers\AssignmentController@store
+  POST      organization/store-course ............................ organization.course.store › Modules\Organization\Http\Controllers\CourseController@storeCourse
+  POST      organization/store-experience/{id} organization.instructor.store.experience › Modules\Organization\Http\Controllers\ExperienceController@storeExperi…
+  POST      organization/store-institute/{id} organization.instructor.store.institute › Modules\Organization\Http\Controllers\EducationController@storeInstitute
+  POST      organization/store-lesson/{id} ............................. organization.lesson.store › Modules\Organization\Http\Controllers\LessonController@store
+  POST      organization/store-noticeboard/{id} .............. organization.noticeboard.store › Modules\Organization\Http\Controllers\NoticeBoardController@store
+  POST      organization/store-question/{id} ....................... organization.question.store › Modules\Organization\Http\Controllers\QuestionController@store
+  POST      organization/store-section/{slug} ........................ organization.section.store › Modules\Organization\Http\Controllers\SectionController@store
+  POST      organization/update-assignment/{id} .............. organization.assignment.update › Modules\Organization\Http\Controllers\AssignmentController@update
+  POST      organization/update-course/{slug} .................. organization.course.update › Modules\Organization\Http\Controllers\CourseController@updateCourse
+  POST      organization/update-experience/{key}/{id} organization.instructor.update.experience › Modules\Organization\Http\Controllers\ExperienceController@upd…
+  POST      organization/update-institute/{key}/{id} organization.instructor.update.institute › Modules\Organization\Http\Controllers\EducationController@update…
+  POST      organization/update-lesson/{id} .......................... organization.lesson.update › Modules\Organization\Http\Controllers\LessonController@update
+  POST      organization/update-noticeboard/{id} ........... organization.noticeboard.update › Modules\Organization\Http\Controllers\NoticeBoardController@update
+  POST      organization/update-question/{id} .................... organization.question.update › Modules\Organization\Http\Controllers\QuestionController@update
+  POST      organization/update-section/{id} ....................... organization.section.update › Modules\Organization\Http\Controllers\SectionController@update
+  GET|HEAD  package_payments/status ........................................................... payment.package_status › Frontend\PaymentController@packageStatus
+  GET|HEAD  package_payments/verify/{method} .................................................. payment.package_verify › Frontend\PaymentController@packageVerify
+  POST      package_payments/verify/{method} .............................................. payment.package_verifyPost › Frontend\PaymentController@packageVerify
+  GET|HEAD  page/{slug}/{id} .................................................................................. frontend.page.link › Frontend\PageController@page
+  GET|HEAD  panel/event ........................................................... instructor.event.index › Modules\Event\Http\Controllers\EventController@index
+  GET|HEAD  panel/event/create .................................................. instructor.event.create › Modules\Event\Http\Controllers\EventController@create
+  GET|HEAD  panel/event/delete/{id} ........................................... instructor.event.destroy › Modules\Event\Http\Controllers\EventController@destroy
+  GET|HEAD  panel/event/edit/{id} ................................................... instructor.event.edit › Modules\Event\Http\Controllers\EventController@edit
+  GET|HEAD  panel/event/financial/sales-report/event ........ instructor.sales_report.event › Modules\Event\Http\Controllers\EventFinancialController@salesReport
+  GET|HEAD  panel/event/financial/sales-report/event/download instructor.sales_report.event.download › Modules\Event\Http\Controllers\EventFinancialController@s…
+  GET|HEAD  panel/event/invoice/view/{id} ............... event.instructor.invoice.view › Modules\Event\Http\Controllers\EventInvoiceController@instructorInvoice
+  GET|HEAD  panel/event/organizers/create/{id} .................... instructor.event.organizer.create › Modules\Event\Http\Controllers\OrganizerController@create
+  GET|HEAD  panel/event/organizers/delete/{id} .................. instructor.event.organizer.destroy › Modules\Event\Http\Controllers\OrganizerController@destroy
+  GET|HEAD  panel/event/organizers/edit/{id} .......................... instructor.event.organizer.edit › Modules\Event\Http\Controllers\OrganizerController@edit
+  POST      panel/event/organizers/store/{id} ....................... instructor.event.organizer.store › Modules\Event\Http\Controllers\OrganizerController@store
+  POST      panel/event/organizers/update/{id} .................... instructor.event.organizer.update › Modules\Event\Http\Controllers\OrganizerController@update
+  GET|HEAD  panel/event/organizers/{id} ............................. instructor.event.organizer.index › Modules\Event\Http\Controllers\OrganizerController@index
+  GET|HEAD  panel/event/registered ...................................... instructor.event.registered › Modules\Event\Http\Controllers\EventController@registered
+  GET|HEAD  panel/event/registered/details/{id} ..... instructor.event.registered.details.view › Modules\Event\Http\Controllers\EventController@registeredDetails
+  GET|HEAD  panel/event/schedule/create/list/{id} ..... event.instructor.schedule.list.create › Modules\Event\Http\Controllers\EventScheduleController@listCreate
+  GET|HEAD  panel/event/schedule/create/{id} ................... event.instructor.schedule.create › Modules\Event\Http\Controllers\EventScheduleController@create
+  GET|HEAD  panel/event/schedule/delete/list/{id} ... event.instructor.schedule.list.destroy › Modules\Event\Http\Controllers\EventScheduleController@listDestroy
+  GET|HEAD  panel/event/schedule/delete/{id} ................. event.instructor.schedule.destroy › Modules\Event\Http\Controllers\EventScheduleController@destroy
+  GET|HEAD  panel/event/schedule/edit/list/{id} ........... event.instructor.schedule.list.edit › Modules\Event\Http\Controllers\EventScheduleController@listEdit
+  GET|HEAD  panel/event/schedule/edit/{id} ......................... event.instructor.schedule.edit › Modules\Event\Http\Controllers\EventScheduleController@edit
+  GET|HEAD  panel/event/schedule/list/{id} ....................... event.instructor.schedule.index › Modules\Event\Http\Controllers\EventScheduleController@index
+  POST      panel/event/schedule/store/list/{id} ........ event.instructor.schedule.list.store › Modules\Event\Http\Controllers\EventScheduleController@listStore
+  POST      panel/event/schedule/store/{id} ...................... event.instructor.schedule.store › Modules\Event\Http\Controllers\EventScheduleController@store
+  POST      panel/event/schedule/update/list/{id} ..... event.instructor.schedule.list.update › Modules\Event\Http\Controllers\EventScheduleController@listUpdate
+  POST      panel/event/schedule/update/{id} ................... event.instructor.schedule.update › Modules\Event\Http\Controllers\EventScheduleController@update
+  GET|HEAD  panel/event/schedule/view/list/{id} ........... event.instructor.schedule.list.view › Modules\Event\Http\Controllers\EventScheduleController@listView
+  GET|HEAD  panel/event/speakers/create/{id} .......................... instructor.event.speaker.create › Modules\Event\Http\Controllers\SpeakerController@create
+  GET|HEAD  panel/event/speakers/delete/{id} ........................ instructor.event.speaker.destroy › Modules\Event\Http\Controllers\SpeakerController@destroy
+  GET|HEAD  panel/event/speakers/edit/{id} ................................ instructor.event.speaker.edit › Modules\Event\Http\Controllers\SpeakerController@edit
+  POST      panel/event/speakers/store/{id} ............................. instructor.event.speaker.store › Modules\Event\Http\Controllers\SpeakerController@store
+  POST      panel/event/speakers/update/{id} .......................... instructor.event.speaker.update › Modules\Event\Http\Controllers\SpeakerController@update
+  GET|HEAD  panel/event/speakers/{id} ................................... instructor.event.speaker.index › Modules\Event\Http\Controllers\SpeakerController@index
+  POST      panel/event/store ..................................................... instructor.event.store › Modules\Event\Http\Controllers\EventController@store
+  POST      panel/event/update/{id} ............................................. instructor.event.update › Modules\Event\Http\Controllers\EventController@update
+  GET|HEAD  payments/status .................................................................................. payment.status › Frontend\PaymentController@status
+  GET|HEAD  payments/verify/{method} ......................................................................... payment.verify › Frontend\PaymentController@verify
+  POST      payments/verify/{method} ..................................................................... payment.verifyPost › Frontend\PaymentController@verify
+  GET|HEAD  privacy-policy ...................................................................... frontend.privacy_policy › Frontend\PageController@privacyPolicy
+  POST      reset-password ............................................................. frontend.reset_password_post › Frontend\AuthController@resetPasswordPost
+  GET|HEAD  reset-password/{email} .............................................................. frontend.reset_password › Frontend\AuthController@resetPassword
+  GET|HEAD  resources ......................................................... frontend.resources › Modules\Resources\Http\Controllers\ResourcesController@index
+  GET|HEAD  roles .................................................................................................... roles.index › Backend\RoleController@index
+  GET|HEAD  roles/create ........................................................................................... roles.create › Backend\RoleController@create
+  GET|HEAD  roles/delete/{id} ...................................................................................... roles.delete › Backend\RoleController@delete
+  GET|HEAD  roles/edit/{id} ............................................................................................ roles.edit › Backend\RoleController@edit
+  POST      roles/store .............................................................................................. roles.store › Backend\RoleController@store
+  PUT       roles/update/{id} ...................................................................................... roles.update › Backend\RoleController@update
+  GET|HEAD  sanctum/csrf-cookie ............................................................... sanctum.csrf-cookie › Laravel\Sanctum › CsrfCookieController@show
+  GET|HEAD  search ..................................................................................... frontend.search › Frontend\CourseController@searchFilter
+  POST      select/country-list ........................................................................................... Frontend\SelectController@countryList
+  GET|HEAD  seo-setting ............................................................................. settings.seo_setting › Backend\SettingController@seoSetting
+  POST      seo-setting-update ......................................................... settings.seo_setting_update › Backend\SettingController@seoSettingUpdate
+  GET|HEAD  services ............................................................. frontend.services › Modules\Services\Http\Controllers\ServicesController@index
+  GET|HEAD  services/details/{id} ....................................... frontend.service-details › Modules\Services\Http\Controllers\ServicesController@details
+  GET|HEAD  setting .................................................................................... Modules\Setting\Http\Controllers\SettingController@index
+  GET|HEAD  sign-in ............................................................................................ frontend.signIn › Frontend\AuthController@signIn
+  POST      sign-in ................................................................................... student.sign_in_post › Frontend\AuthController@signInPost
+  GET|HEAD  sign-up ................................................................................ student.sign_up › Panel\Student\StudentAuthController@signUp
+  POST      sign-up ....................................................................... student.sign_up_post › Panel\Student\StudentAuthController@signUpPost
+  GET|HEAD  startups ............................................................. frontend.startups › Modules\StartUps\Http\Controllers\StartUpsController@index
+  GET|HEAD  startups/details/{id} ................................ frontend.startups-details › Modules\StartUps\Http\Controllers\StartupDetailsController@details
+  GET|HEAD  startups/signup .............................................. frontend.startups.signup › Modules\StartUps\Http\Controllers\StartUpsController@signup
+  POST      startups/storeSignup ..................................... frontend.startups.storeSignup › Modules\StartUps\Http\Controllers\StartUpsController@store
+  GET|HEAD  startups/student .............................................. student.startup › Modules\StartUps\Http\Controllers\StartUpsController@studentStartup
+  GET|HEAD  startups/student/edit/{id} .................................. student.startup.edit › Modules\StartUps\Http\Controllers\StartUpsController@editStartup
+  PUT       startups/student/update/{id} ................................... student.startup.update › Modules\StartUps\Http\Controllers\StartUpsController@update
+  GET|HEAD  startups/{id}/advisors/edit ........................ startups.advisors.edit › Modules\StartUps\Http\Controllers\StartupDetailsController@editAdvisors
+  PUT       startups/{id}/advisors/update .................. startups.advisors.update › Modules\StartUps\Http\Controllers\StartupDetailsController@updateAdvisors
+  GET|HEAD  startups/{id}/highlights/edit .................. startups.highlights.edit › Modules\StartUps\Http\Controllers\StartupDetailsController@editHighLights
+  PUT       startups/{id}/highlights/update ............ startups.highlights.update › Modules\StartUps\Http\Controllers\StartupDetailsController@updateHighLights
+  GET|HEAD  startups/{id}/howItWorks/edit .................. startups.howItWorks.edit › Modules\StartUps\Http\Controllers\StartupDetailsController@editHowItWorks
+  PUT       startups/{id}/howItWorks/update ............ startups.howItWorks.update › Modules\StartUps\Http\Controllers\StartupDetailsController@updateHowItWorks
+  GET|HEAD  startups/{id}/impacts ................................... startups.impacts.index › Modules\StartUps\Http\Controllers\StartupDetailsController@impacts
+  POST      startups/{id}/impacts/add ............................... startups.impacts.add › Modules\StartUps\Http\Controllers\StartupDetailsController@addImpact
+  DELETE    startups/{id}/impacts/{$impact_id}/delete ......... startups.impacts.delete › Modules\StartUps\Http\Controllers\StartupDetailsController@deleteImpact
+  GET|HEAD  startups/{id}/partnerships/edit ............ startups.partnerships.edit › Modules\StartUps\Http\Controllers\StartupDetailsController@editPartnerships
+  PUT       startups/{id}/partnerships/update ...... startups.partnerships.update › Modules\StartUps\Http\Controllers\StartupDetailsController@updatePartnerships
+  GET|HEAD  startups/{id}/problem/edit ........................... startups.problem.edit › Modules\StartUps\Http\Controllers\StartupDetailsController@editProblem
+  PUT       startups/{id}/problem/update ..................... startups.problem.update › Modules\StartUps\Http\Controllers\StartupDetailsController@updateProblem
+  GET|HEAD  startups/{id}/solution/edit ........................ startups.solution.edit › Modules\StartUps\Http\Controllers\StartupDetailsController@editSolution
+  PUT       startups/{id}/solution/update .................. startups.solution.update › Modules\StartUps\Http\Controllers\StartupDetailsController@updateSolution
+  GET|HEAD  startups/{id}/team/edit .................................... startups.team.edit › Modules\StartUps\Http\Controllers\StartupDetailsController@editTeam
+  PUT       startups/{id}/team/update .............................. startups.team.update › Modules\StartUps\Http\Controllers\StartupDetailsController@updateTeam
+  GET|HEAD  startups/{id}/traction/edit ........................ startups.traction.edit › Modules\StartUps\Http\Controllers\StartupDetailsController@editTraction
+  PUT       startups/{id}/traction/update .................. startups.traction.update › Modules\StartUps\Http\Controllers\StartupDetailsController@updateTraction
+  GET|HEAD  storage-setting .................................................................. settings.storagesetting › Backend\SettingController@storageSetting
+  PUT       storage-setting-update ............................................... settings.storageSettingUpdate › Backend\SettingController@storageSettingUpdate
+  GET|HEAD  student/assignment/assignment/details/{enroll_id}/{assignment_id} . student.assignment.details › Panel\Student\AssignmentController@assignmentDetails
+  GET|HEAD  student/assignment/assignment/download/{enroll_id}/{assignment_id} student.assignment.download › Panel\Student\AssignmentController@assignmentDownlo…
+  POST      student/assignment/assignment/store/{lesson_id}/{assignment_id} ....... student.assignment.store › Panel\Student\AssignmentController@assignmentStore
+  GET|HEAD  student/certificate/download/{enroll_id} ..................... student.certificate.download › Panel\Student\CertificateController@certificateDownload
+  GET|HEAD  student/certificate/view/{enroll_id} ................................. student.certificate.view › Panel\Student\CertificateController@certificateView
+  GET|HEAD  student/certificates ........................................................ student.certificates › Panel\Student\CertificateController@certificates
+  GET|HEAD  student/course-activities .............................................. student.course_activities › Panel\Student\StudentController@courseActivities
+  POST      student/course-lecture-progress ................................................................ Panel\Student\StudentController@courseEnrollProgress
+  POST      student/course-tab-load ..................................................................................... Panel\Student\StudentController@tabLoad
+  GET|HEAD  student/course/{slug}/learn/lecture/{lesson_id} .................................. student.course.learn › Panel\Student\StudentController@courseLearn
+  GET|HEAD  student/courses ............................................................................ student.course › Panel\Student\StudentController@courses
+  GET|HEAD  student/dashboard ..................................................................... student.dashboard › Panel\Student\StudentController@dashboard
+  GET|HEAD  student/event ........................................................... student.event › Modules\Event\Http\Controllers\StudentEventController@index
+  GET|HEAD  student/event/details/{id} ............................... student.event.details.view › Modules\Event\Http\Controllers\StudentEventController@details
+  GET|HEAD  student/event/invoice/view/{id} ................... event.student.invoice.view › Modules\Event\Http\Controllers\EventInvoiceController@studentInvoice
+  GET|HEAD  student/leader-board ............................................................. student.leader_board › Panel\Student\StudentController@leaderBoard
+  POST      student/logout .............................................................................. student.logout › Panel\Student\StudentController@logout
+  GET|HEAD  student/my-learning ................................................................ student.my_learning › Panel\Student\StudentController@myLearning
+  GET|HEAD  student/note/note/create/{lesson_id} .................................................. student.note.create › Panel\Student\NoteController@noteCreate
+  GET|HEAD  student/note/note/delete/{id} ......................................................... student.note.delete › Panel\Student\NoteController@noteDelete
+  GET|HEAD  student/note/note/edit/{id} ............................................................... student.note.edit › Panel\Student\NoteController@noteEdit
+  POST      student/note/note/store/{lesson_id} ..................................................... student.note.store › Panel\Student\NoteController@noteStore
+  POST      student/note/note/update/{id} ......................................................... student.note.update › Panel\Student\NoteController@noteUpdate
+  GET|HEAD  student/profile ........................................................................... student.profile › Panel\Student\StudentController@profile
+  GET|HEAD  student/quiz/answer-list/{lesson_id} .................................................. student.answer.list › Panel\Student\QuizController@answerList
+  GET|HEAD  student/quiz/question-load/{quiz_id} ...................................................................... Panel\Student\QuizController@questionLoad
+  POST      student/quiz/question-submit .......................................................... student.quiz.submit › Panel\Student\QuizController@quizSubmit
+  GET|HEAD  student/quiz/question-up/{quiz_id} .......................................................................... Panel\Student\QuizController@questionUp
+  GET|HEAD  student/quiz/quiz/start/{lesson_id} ..................................................... student.quiz.start › Panel\Student\QuizController@quizStart
+  GET|HEAD  student/quiz/quiz/{lesson_id} ...................................................................... student.quiz › Panel\Student\QuizController@quiz
+  GET|HEAD  student/review/review/create/{course_id} ........................................ student.review.create › Panel\Student\ReviewController@reviewCreate
+  GET|HEAD  student/review/review/delete/{id} ............................................... student.review.delete › Panel\Student\ReviewController@reviewDelete
+  GET|HEAD  student/review/review/edit/{id} ..................................................... student.review.edit › Panel\Student\ReviewController@reviewEdit
+  POST      student/review/review/store/{course_id} ........................................... student.review.store › Panel\Student\ReviewController@reviewStore
+  POST      student/review/review/update/{id} ............................................... student.review.update › Panel\Student\ReviewController@reviewUpdate
+  GET|HEAD  student/setting/add-experience ............................................ student.add.experience › Panel\Student\ExperienceController@addExperience
+  GET|HEAD  student/setting/add-institute ................................................. student.addInstitute › Panel\Student\EducationController@addInstitute
+  GET|HEAD  student/setting/add-skills ............................................................ student.add.skill › Panel\Student\SettingsController@addSkill
+  GET|HEAD  student/setting/delete-experience/{key} ............................. student.delete.experience › Panel\Student\ExperienceController@deleteExperience
+  GET|HEAD  student/setting/delete-institute/{key} ................................. student.delete.institute › Panel\Student\EducationController@deleteInstitute
+  GET|HEAD  student/setting/edit-experience/{key} ................................... student.edit.experience › Panel\Student\ExperienceController@editExperience
+  GET|HEAD  student/setting/edit-institute/{key} ....................................... student.edit.institute › Panel\Student\EducationController@editInstitute
+  GET|HEAD  student/setting/profile/{slug?} .......................................................... student.setting › Panel\Student\SettingsController@setting
+  POST      student/setting/store-experience ...................................... student.store.experience › Panel\Student\ExperienceController@storeExperience
+  POST      student/setting/store-institute .......................................... student.store.institute › Panel\Student\EducationController@storeInstitute
+  POST      student/setting/store-skills ...................................................... student.store.skill › Panel\Student\SettingsController@storeSkill
+  POST      student/setting/update-experience/{key} ............................. student.update.experience › Panel\Student\ExperienceController@updateExperience
+  POST      student/setting/update-institute/{key} ................................. student.update.institute › Panel\Student\EducationController@updateInstitute
+  POST      student/setting/update-password ........................................... student.update_password › Panel\Student\SettingsController@updatePassword
+  POST      student/setting/update-profile .............................................. student.update_profile › Panel\Student\SettingsController@updateProfile
+  GET|HEAD  terms-conditions ............................................................ frontend.terms_and_conditions › Frontend\PageController@termsConditions
+  GET|HEAD  test ................................................................................................................................................ 
+  GET|HEAD  users .................................................................................................... users.index › Backend\UserController@index
+  GET|HEAD  users/change-role ................................................................................... change.role › Backend\UserController@changeRole
+  GET|HEAD  users/create ........................................................................................... users.create › Backend\UserController@create
+  GET|HEAD  users/delete/{id} ...................................................................................... users.delete › Backend\UserController@delete
+  GET|HEAD  users/edit/{id} ............................................................................................ users.edit › Backend\UserController@edit
+  POST      users/status ........................................................................................... users.status › Backend\UserController@status
+  POST      users/store .............................................................................................. users.store › Backend\UserController@store
+  PUT       users/update/{id} ...................................................................................... users.update › Backend\UserController@update
+  DELETE    users/{id} ........................................................................................... users.deletes › Backend\UserController@deletes
+  GET|HEAD  verify-email/{email} .................................................................... frontend.verify_email › Frontend\AuthController@verifyEmail
+
+                                                                                                                                             Showing [893] routes
+

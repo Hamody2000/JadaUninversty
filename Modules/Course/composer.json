@@ -1,0 +1,22 @@
+{
+    "name": "nwidart/course",
+    "description": "",
+    "authors": [
+        {
+            "name": "Black Hourse"   
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Course\\": ""
+        }
+    }
+}

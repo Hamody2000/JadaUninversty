@@ -1,0 +1,21 @@
+{
+    "Title": "الخدمات",
+    "Service Title": "اسم الخدمة باللغة الانجليزية",
+    "Service Arabic Title": " اسم الخدمة باللغة العربية",
+    "Description": "الوصف باللغة الانجليزية",
+    "Arabic Description": "الوصف باللغة العربية",
+    "Image": "الصورة",
+
+    "Enter Service Title": "أدخل اسم الخدمة باللغة الانجليزية",
+    "Enter Service Title In Arabic": "أدخل اسم الخدمة باللغة العربية",
+
+    "Enter Service Description": "أدخل وصف الخدمة باللغة الانجليزية",
+    "Enter Service Description In Arabic": "أدخل وصف الخدمة باللغة العربية",
+
+    "Upload Service Image": "أدخل صورة الخدمة",
+
+    "Create Service": "إنشاء خدمة",
+    "Edit Service": "تحديث خدمة",
+    "Delete Service": "حذف خدمة",
+    "Services List": "قائمة الخدمات"
+}

@@ -1,0 +1,12 @@
+{
+    "name": "ZoomMeeting",
+    "alias": "zoommeeting",
+    "description": "The ZoomMeeting module seamlessly integrates with the popular Zoom platform to bring powerful virtual meeting capabilities to your application. Host and join video conferences, webinars, and online events with ease. Enjoy crystal-clear audio and high-definition video quality for seamless collaboration and communication.",
+    "keywords": [],
+    "thumbnail": "zoom_meeting.png",
+    "priority": 0,
+    "providers": [
+        "Modules\\ZoomMeeting\\Providers\\ZoomMeetingServiceProvider"
+    ],
+    "files": []
+}

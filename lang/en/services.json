@@ -1,0 +1,17 @@
+{"Title":"Services",
+    "Service Title":"English Title",
+    "Service Arabic Title":"Arabic Title",
+    "Description":"English Description",
+    "Arabic Description":"Arabic Description",
+    "Image":"Image",
+    "Enter Service Title":"Enter Service Title In English",
+    "Enter Service Title In Arabic":"Enter Service Title In Arabic",
+    "Enter Service Description":"Enter Service Description In English",
+    "Enter Service Description In Arabic":"Enter Service Description In Arabic",
+    "Upload Service Image":"Upload Service Image",
+    "Create Service":"Create Service",
+    "Edit Service":"Edit Service",
+    "Delete Service":"Delete Service",
+    "Update Service":"Update Service",
+    "Services List": "Services List"
+}

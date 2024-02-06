@@ -1,0 +1,11 @@
+{
+    "name": "StartUps",
+    "alias": "startups",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\StartUps\\Providers\\StartUpsServiceProvider"
+    ],
+    "files": []
+}
