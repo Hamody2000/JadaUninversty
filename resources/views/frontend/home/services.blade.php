@@ -4,7 +4,7 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="BU_Ai_Fin_Indiv_Item HavBoxShadow">
                     <div class="image">
-                        <img src="http://localhost:8000/frontend/assets/NewImages/redAsset_9.svg">
+                        <img src="http://172.16.4.173/frontend/assets/NewImages/redAsset_9.svg">
                     </div>
                     <div class="tem_Dtata">
                         <h1>{{ ___('frontend.Business & Mentoring') }}</h1>
@@ -15,7 +15,7 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="BU_Ai_Fin_Indiv_Item ">
                     <div class="image">
-                        <img src="http://localhost:8000/frontend/assets/NewImages/redAsset_20.svg">
+                        <img src="http://172.16.4.173/frontend/assets/NewImages/redAsset_20.svg">
                     </div>
                     <div class="tem_Dtata">
                         <h1>{{ ___('frontend.AI Expertise') }}</h1>
@@ -26,7 +26,7 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="BU_Ai_Fin_Indiv_Item ">
                     <div class="image">
-                        <img src="http://localhost:8000/frontend/assets/NewImages/redAsset_27.svg">
+                        <img src="http://172.16.4.173/frontend/assets/NewImages/redAsset_27.svg">
                     </div>
                     <div class="tem_Dtata">
                         <h1>{{ ___('frontend.Financial Investment') }}</h1>
@@ -37,7 +37,7 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="BU_Ai_Fin_Indiv_Item HavBoxShadow">
                     <div class="image">
-                        <img src="http://localhost:8000/frontend/assets/NewImages/redAsset_26.svg">
+                        <img src="http://172.16.4.173/frontend/assets/NewImages/redAsset_26.svg">
                     </div>
                     <div class="tem_Dtata">
                         <h1>{{ ___('frontend.Individual Approach') }}</h1>

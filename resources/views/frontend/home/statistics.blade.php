@@ -6,7 +6,7 @@
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="StatisticItem">
                         <div class="ImagIcon">
-                            <img src="http://localhost:8000/frontend/assets/NewImages/check.svg">
+                            <img src="http://172.16.4.173/frontend/assets/NewImages/check.svg">
                         </div>
                         <h1><span>4049</span><span>+</span></h1>
                         <p>{{ ___('frontend.Startups Evaluated') }}</p>
@@ -15,7 +15,7 @@
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="StatisticItem">
                         <div class="ImagIcon">
-                            <img src="http://localhost:8000/frontend/assets/NewImages/Mentors.svg">
+                            <img src="http://172.16.4.173/frontend/assets/NewImages/Mentors.svg">
                         </div>
                         <h1><span>70</span><span>+</span></h1>
                         <p>{{ ___('frontend.Mentors') }}</p>
@@ -24,7 +24,7 @@
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="StatisticItem">
                         <div class="ImagIcon">
-                            <img src="http://localhost:8000/frontend/assets/NewImages/check.svg">
+                            <img src="http://172.16.4.173/frontend/assets/NewImages/check.svg">
                         </div>
                         <h1><span>100</span><span>+</span></h1>
                         <p>{{ ___('frontend.Ticket up to') }}</p>
@@ -33,7 +33,7 @@
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="StatisticItem">
                         <div class="ImagIcon">
-                            <img src="http://localhost:8000/frontend/assets/NewImages/Mentors.svg">
+                            <img src="http://172.16.4.173/frontend/assets/NewImages/Mentors.svg">
                         </div>
                         <h1><span>2874</span><span>+</span></h1>
                         <p>{{ ___('frontend.Students') }}</p>
