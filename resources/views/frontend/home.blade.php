@@ -26,9 +26,9 @@
             @include('frontend.home.featured_courses')
         @elseif($section->snake_title == 'popular_category')
             @include('frontend.home.popular_category')
-        <!-- @elseif($section->snake_title == 'latest_courses')
+         @elseif($section->snake_title == 'latest_courses')
             @include('frontend.home.latest_courses')
-        @elseif($section->snake_title == 'best_rated_courses')
+        <!-- @elseif($section->snake_title == 'best_rated_courses')
             @include('frontend.home.best_rated_courses') -->
 
         {{--  @elseif($section->snake_title == 'discount_courses')
