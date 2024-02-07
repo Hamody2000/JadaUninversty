@@ -9,7 +9,7 @@
         <!-- Start New Modifications -->
         @elseif($section->snake_title == 'general_description')
             @include('frontend.home.general_description')
-            
+
         @elseif($section->snake_title == 'services')
             @include('frontend.home.services')
 
