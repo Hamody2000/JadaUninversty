@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <input type="hidden" name="url" id="url" value="{{ url('') }}">
-
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="keywords" content="{{ setting('meta_keyword') }}">
     <meta name="author" content="{{ setting('author') }}">
     <meta name="description" content="{{ setting('meta_description') }}">
@@ -18,7 +18,7 @@
     @else
         <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/bootstrap.min.css">
     @endif
-    
+
 
     <!-- css  -->
     <!-- metis menu for sidebar  -->
@@ -32,7 +32,7 @@
     @stack('css')
 
     <style>
-        
+
     [type="radio"]:checked, [type="radio"]:not(:checked){
         position: relative !important;
     }
@@ -87,7 +87,7 @@
     <script src="{{ asset('backend') }}/assets/js/file-uploader.js"></script>
     @stack('script')
     <script src="{{ asset('backend') }}/assets/js/custom.js"></script>
-    <script src="{{ asset('backend') }}/assets/js/select-request.js"></script>  
+    <script src="{{ asset('backend') }}/assets/js/select-request.js"></script>
 
 </body>
 
