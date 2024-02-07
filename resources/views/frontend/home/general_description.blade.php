@@ -1,7 +1,7 @@
 <div class="general_description LoakAiDescription">
     {{-- <div class="container">
         <div class="logoImage">
-            <img src="http://172.16.4.173/backend/uploads/default-images/logo.png">
+            <img src="https://uj-incubator.uj.edu.sa/backend/uploads/default-images/logo.png">
         </div>
         <div class="Description">
             <p>{{ ___('frontend.AI Startup Incubator (AISI) became a subsidiary of the newly built Look AI Ventures (LAIV) SICAV fund and merged its existing portfolio, expertise, resources, scouting, and evaluation processes into the new fund structure. AISI keeps doing its work and AI startup investment activities within the LAIV structure.') }}</p>
