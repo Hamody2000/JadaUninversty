@@ -1,4 +1,4 @@
-<div class="experts Ai_Experts">
+<!-- <div class="experts Ai_Experts">
     <div class="container">
         <div class="titie_ShortDesc">
             <h2>{{ ___('frontend.AI Expertise') }}</h2>
@@ -9,7 +9,7 @@
             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                 <div class="Ai_Experts_Item">
                     <div class="Imag">
-                        <img src="http://localhost:8000/frontend/assets/NewImages/redAsset_26.svg">
+                        <img src="{{ asset('frontend') }}/assets/NewImages/redAsset_26.svg">
                     </div>
                     <h2>{{ ___('frontend.Healthcare & Wellbeing') }}<h2>
                 </div>
@@ -17,7 +17,7 @@
             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                 <div class="Ai_Experts_Item">
                     <div class="Imag">
-                        <img src="http://localhost:8000/frontend/assets/NewImages/redAsset_26.svg">
+                        <img src="{{ asset('frontend') }}/assets/NewImages/redAsset_26.svg">
                     </div>
                     <h2>{{ ___('frontend.Healthcare & Wellbeing') }}<h2>
                 </div>
@@ -25,7 +25,7 @@
             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                 <div class="Ai_Experts_Item">
                     <div class="Imag">
-                        <img src="http://localhost:8000/frontend/assets/NewImages/redAsset_26.svg">
+                        <img src="{{ asset('frontend') }}/assets/NewImages/redAsset_26.svg">
                     </div>
                     <h2>{{ ___('frontend.Healthcare & Wellbeing') }}<h2>
                 </div>
@@ -33,7 +33,7 @@
             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                 <div class="Ai_Experts_Item">
                     <div class="Imag">
-                        <img src="http://localhost:8000/frontend/assets/NewImages/redAsset_26.svg">
+                        <img src="{{ asset('frontend') }}/assets/NewImages/redAsset_26.svg">
                     </div>
                     <h2>{{ ___('frontend.Healthcare & Wellbeing') }}<h2>
                 </div>
@@ -41,7 +41,7 @@
             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                 <div class="Ai_Experts_Item">
                     <div class="Imag">
-                        <img src="http://localhost:8000/frontend/assets/NewImages/redAsset_26.svg">
+                        <img src="{{ asset('frontend') }}/assets/NewImages/redAsset_26.svg">
                     </div>
                     <h2>{{ ___('frontend.Healthcare & Wellbeing') }}<h2>
                 </div>
@@ -49,7 +49,7 @@
             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                 <div class="Ai_Experts_Item">
                     <div class="Imag">
-                        <img src="http://localhost:8000/frontend/assets/NewImages/redAsset_26.svg">
+                        <img src="{{ asset('frontend') }}/assets/NewImages/redAsset_26.svg">
                     </div>
                     <h2>{{ ___('frontend.Healthcare & Wellbeing') }}<h2>
                 </div>
@@ -57,7 +57,7 @@
             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                 <div class="Ai_Experts_Item">
                     <div class="Imag">
-                        <img src="http://localhost:8000/frontend/assets/NewImages/redAsset_26.svg">
+                        <img src="{{ asset('frontend') }}/assets/NewImages/redAsset_26.svg">
                     </div>
                     <h2>{{ ___('frontend.Healthcare & Wellbeing') }}<h2>
                 </div>
@@ -65,7 +65,7 @@
             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                 <div class="Ai_Experts_Item">
                     <div class="Imag">
-                        <img src="http://localhost:8000/frontend/assets/NewImages/redAsset_26.svg">
+                        <img src="{{ asset('frontend') }}/assets/NewImages/redAsset_26.svg">
                     </div>
                     <h2>{{ ___('frontend.Healthcare & Wellbeing') }}<h2>
                 </div>
@@ -73,7 +73,7 @@
             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                 <div class="Ai_Experts_Item">
                     <div class="Imag">
-                        <img src="http://localhost:8000/frontend/assets/NewImages/redAsset_26.svg">
+                        <img src="{{ asset('frontend') }}/assets/NewImages/redAsset_26.svg">
                     </div>
                     <h2>{{ ___('frontend.Healthcare & Wellbeing') }}<h2>
                 </div>
@@ -81,7 +81,7 @@
             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                 <div class="Ai_Experts_Item">
                     <div class="Imag">
-                        <img src="http://localhost:8000/frontend/assets/NewImages/redAsset_26.svg">
+                        <img src="{{ asset('frontend') }}/assets/NewImages/redAsset_26.svg">
                     </div>
                     <h2>{{ ___('frontend.Healthcare & Wellbeing') }}<h2>
                 </div>
@@ -91,4 +91,4 @@
             <a href="AboutUsPage">{{ ___('frontend.Discover more') }}</a>
         </div>
     </div>
-</div>
+</div> -->

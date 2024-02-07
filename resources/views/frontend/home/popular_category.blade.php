@@ -54,11 +54,11 @@
 
 				<div class="side_block extream_img">
 					<div class="list_crs_img">
-						<img src="http://localhost:8000/frontend/assets/NewImages/img-1.png" class="img-fluid elsio cirl animate-fl-y" alt="">
-						<img src="http://localhost:8000/frontend/assets/NewImages/img-3.png" class="img-fluid elsio arrow animate-fl-x" alt="">
-						<img src="http://localhost:8000/frontend/assets/NewImages/img-2.png" class="img-fluid elsio moon animate-fl-x" alt="">
+						<img src="{{ asset('frontend') }}/assets/NewImages/img-1.png" class="img-fluid elsio cirl animate-fl-y" alt="">
+						<img src="{{ asset('frontend') }}/assets/NewImages/img-3.png" class="img-fluid elsio arrow animate-fl-x" alt="">
+						<img src="{{ asset('frontend') }}/assets/NewImages/img-2.png" class="img-fluid elsio moon animate-fl-x" alt="">
 					</div>
-					<img src="http://localhost:8000/frontend/assets/NewImages/st-3.png" class="img-fluid" alt="">
+					<img src="{{ asset('frontend') }}/assets/NewImages/st-3.png" class="img-fluid" alt="">
 				</div>
 			</div>
 		</div>
