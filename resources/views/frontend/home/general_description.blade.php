@@ -1,10 +1,10 @@
 <div class="general_description LoakAiDescription">
-    <div class="container">
+    {{-- <div class="container">
         <div class="logoImage">
             <img src="http://localhost:8000/backend/uploads/default-images/logo.png">
         </div>
         <div class="Description">
-            <p>{{ ___('frontend.In Q4 2022, AI Startup Incubator (AISI) became a subsidiary of the newly built Look AI Ventures (LAIV) SICAV fund and merged its existing portfolio, expertise, resources, scouting, and evaluation processes into the new fund structure. AISI keeps doing its work and AI startup investment activities within the LAIV structure.') }}</p>
+            <p>{{ ___('frontend.AI Startup Incubator (AISI) became a subsidiary of the newly built Look AI Ventures (LAIV) SICAV fund and merged its existing portfolio, expertise, resources, scouting, and evaluation processes into the new fund structure. AISI keeps doing its work and AI startup investment activities within the LAIV structure.') }}</p>
         </div>
         <div class="WhyArePrefer">
             <h1>{{ ___('frontend.Why are we perfect for you') }}</h1>
@@ -17,5 +17,5 @@
                 <a href="AboutUsPage">{{ ___('frontend.Discover more') }}</a>
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>

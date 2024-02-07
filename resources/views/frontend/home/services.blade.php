@@ -8,7 +8,8 @@
                     </div>
                     <div class="tem_Dtata">
                         <h1>{{ ___('frontend.Business & Mentoring') }}</h1>
-                        <p>{{ ___('frontend.Leading experts will provide not only legal, financial, marketing, and HR advice, but also support to help you with strategic planning and traction boost. We know domain expertise and execution wins over technology disruption alone.') }}</p>
+                        <p>{{ ___('frontend.Leading experts will provide not only legal, financial, marketing, and HR advice, but also support to help you with strategic planning and traction boost. We know domain expertise and execution wins over technology disruption alone.') }}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -19,7 +20,8 @@
                     </div>
                     <div class="tem_Dtata">
                         <h1>{{ ___('frontend.AI Expertise') }}</h1>
-                        <p>{{ ___('frontend.Your project will be supported by AI technology professionals, through counsel, prototyping, and features development. We have an in-depth understanding of AI technology practical for speech recognition, problem-solving, learning and planning.') }}</p>
+                        <p>{{ ___('frontend.Your project will be supported by AI technology professionals, through counsel, prototyping, and features development. We have an in-depth understanding of AI technology practical for speech recognition, problem-solving, learning and planning.') }}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -41,7 +43,8 @@
                     </div>
                     <div class="tem_Dtata">
                         <h1>{{ ___('frontend.Individual Approach') }}</h1>
-                        <p>{{ ___('frontend.We do not adopt a one-fits-all approach with the startups we partner with. We listen to your needs and create a customized plan addressing the specific challenges your project might face during its development.') }}</p>
+                        <p>{{ ___('frontend.We do not adopt a one-fits-all approach with the startups we partner with. We listen to your needs and create a customized plan addressing the specific challenges your project might face during its development.') }}
+                        </p>
                     </div>
                 </div>
             </div>

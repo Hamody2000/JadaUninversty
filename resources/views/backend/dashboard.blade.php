@@ -6,7 +6,7 @@
 
 @push('css')
     {{-- Chart js --}}
-    <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/apexcharts.min.css">
+    <link rel="stylesheet" href="{{ url('backend') }}/assets/css/apexcharts.min.css">
 @endpush
 
 @section('content')
