@@ -12,7 +12,7 @@
                    <div class="about-caption mb-24 mt-24">
                        <h3 class="title font-600">{{ ___('frontend.Become an instructor') }}</h3>
                        <p class="pera">
-                           {{ ___("frontend.become_instructor_text") }}
+                           {{ ___("frontend") }}
                        </p>
                        <a href="{{ route('becomeInstructor') }}"
                            class="btn-secondary-fill">{{ ___('frontend.Register here') }} <i
