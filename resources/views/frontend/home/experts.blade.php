@@ -9,7 +9,7 @@
             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                 <div class="Ai_Experts_Item">
                     <div class="Imag">
-                        <img src="https://172.16.4.173/frontend/assets/NewImages/redAsset_26.svg">
+                        <img src="https://uj-incubator.uj.edu.sa/frontend/assets/NewImages/redAsset_26.svg">
                     </div>
                     <h2>{{ ___('frontend.Healthcare & Wellbeing') }}<h2>
                 </div>
